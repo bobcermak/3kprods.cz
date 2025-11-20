@@ -4,7 +4,7 @@
 
 > 🌐 Náhled webu – moderní, responzivní, postavené v **Next.js**  
 
-[🚀 Otevřít web](/)
+[🚀 Otevřít web](https://bobcermak.github.io/3kprods.cz/)
 
 ---
 
