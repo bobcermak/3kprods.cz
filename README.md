@@ -1,4 +1,4 @@
-# 3K Productions | Tvůj zážitek - naše práce
+# 3K Productions | Tvůj Zážitek - Naše Práce
 
 ![Mockup webu 3K Productions](/)
 
