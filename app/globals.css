@@ -1,18 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /*Font Families*/
+  --font-raleway: 'Raleway', sans-serif;
+  --font-bungee: 'Bungee', cursive;
+  /*Font Sizes*/
+  --text-body: 1rem;
+  --text-sub: 1.5625rem;
+  --text-title: 2.4375rem;
+  --text-heading: 3.8125rem;
+  --text-display: 5.75rem;
+  /*Colors*/
+  --color-blue: #1C2E55;
+  --color-light-blue: #4461EF;
+  --color-green: #C7EFB3;
+  --color-dark-white: #EDF0FE;
+  --color-white: #FFFFFF;
+  --color-dark: #000222;
+  --color-gold: #FF9A23;
 }
 
 html {
-  font-family: 'Gotham', sans-serif;
-  font-weight: 400;
-  font-size: var(--paragraph, 1rem);
-  color: var(--dark, #1A1A1A);
-  background-color: var(--white, #FFFFFF);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: var(--text-body, 1rem);
+  line-height: 1.5rem;
+  letter-spacing: -0.5%;
+  color: var(--color-dark, #000222);
+  background-color: var(--color-white, #FFFFFF);
   scroll-behavior: smooth;
   overscroll-behavior: none;
 }
