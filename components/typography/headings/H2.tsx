@@ -14,7 +14,7 @@ type H2Props = {
   children: React.ReactNode;
 }
 const H2 = ({ family = "font-raleway", style = "not-italic", size = "text-title", weight = "font-extrabold", leading = "leading-tight", color = "color-light-blue", align = "text-left", case: textCase = "uppercase", className, children }: H2Props) => {
-  const classes = twMerge(family, style, size, weight, leading, color, align, textCase, className);
+  const classes: string = twMerge(family, style, size, weight, leading, color, align, textCase, className);
   return <h2 className={classes}>{children}</h2>;
 }
 export default H2;

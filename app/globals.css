@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 
 @theme {
   /*Font Families*/
@@ -29,7 +30,7 @@ html {
   line-height: 1.5rem;
   letter-spacing: -0.5%;
   color: var(--color-dark, #000222);
-  background-color: var(--color-white, #FFFFFF);
+  background-color: #1E1E1E;
   scroll-behavior: smooth;
   overscroll-behavior: none;
 }

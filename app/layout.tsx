@@ -4,7 +4,6 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "3K Productions | Tvůj Zážitek - Naše Práce",
   description: "Nejlepší maturák tvého života s 3K Productions! Hudba, dekorace a zábava připravená profesionály.",
-  viewport: "width=device-width, initial-scale=1.0",
   referrer: "strict-origin-when-cross-origin",
   keywords: ["3K Productions", "maturák", "studentská akce", "party", "zábava"],
   icons: {
@@ -14,6 +13,10 @@ export const metadata: Metadata = {
     ],
     apple: "/images/assets/favicon-180x180.png"
   }
+};
+export const viewport = {
+  width: "device-width",
+  initialScale: 1.0
 };
 export default function RootLayout({
   children,
