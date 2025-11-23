@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "deploy": "npm run build && gh-pages -d out"
+    "lint": "eslint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
