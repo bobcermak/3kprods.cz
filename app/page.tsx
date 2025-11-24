@@ -8,7 +8,7 @@ const Home = () => {
 
       </header>
       <main>
-        <Button>Click me</Button>
+        
       </main>
       <footer>
 
