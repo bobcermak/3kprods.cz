@@ -13,7 +13,7 @@ type H3Props = {
   className?: string,
   children: React.ReactNode;
 }
-const H3 = ({ family = "font-raleway", style = "not-italic", size = "text-sub", weight = "font-bold", leading = "leading-tight", color = "color-dark", align = "text-left", case: textCase, className, children }: H3Props) => {
+const H3 = ({ family = "font-raleway", style = "not-italic", size = "text-sub", weight = "font-bold", leading = "leading-tight", color = "text-dark", align = "text-left", case: textCase, className, children }: H3Props) => {
   const classes: string = twMerge(family, style, size, weight, leading, color, align, textCase, className);
   return <h3 className={classes}>{children}</h3>;
 }

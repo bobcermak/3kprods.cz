@@ -21,7 +21,7 @@ const Button: FC<ButtonProps> = ({ isLink = true, link = "#", variant = "primary
   const combinedClasses: string = twMerge(baseStyles, variantStyles[variant]);
   const external: boolean = link ? link.startsWith("http") : false;
   const arrow = isArrow ? (
-    <i className={`fa-solid fa-arrow-right ml-2.5 rounded-full transition-transform duration-250 ease-in-out group-hover:translate-x-[2px] ${variant === "primary" ? "text-white bg-light-blue" : "text-blue bg-green"} py-[0.375rem] px-[0.4375rem]`}></i>
+    <i className={`fa-solid fa-arrow-right ml-2.5 rounded-full transition-transform duration-250 ease-in-out group-hover:translate-x-0.5 ${variant === "primary" ? "text-white bg-light-blue" : "text-blue bg-green"} py-1.5 px-1.75`}></i>
   ) : null;
   if (!isLink) return <button className={combinedClasses} onClick={onClick}>{children}{arrow}</button>;
   return external ? (

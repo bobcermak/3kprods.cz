@@ -6,3 +6,5 @@ export { default as P } from './typography/text/P';
 export { default as Ul } from './typography/list/Ul';
 export { default as Li } from './typography/list/Li';
 export { default as Button } from './buttons/Button';
+export { default as Navbar } from './header/Navbar';
+export { default as Badge } from './badges/Badge';

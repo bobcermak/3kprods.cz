@@ -10,7 +10,7 @@ type LiProps = {
   className?: string;
   children: React.ReactNode;
 }
-const Li = ({ size = "text-body", weight = "font-semibold", leading = "leading-snug", color = "color-dark", textCase, className, children }: LiProps) => {
+const Li = ({ size = "text-body", weight = "font-semibold", leading = "leading-snug", color = "text-dark", textCase, className, children }: LiProps) => {
   const classes: string = twMerge(size, weight, leading, color, textCase, className);
   return <li className={classes}>{children}</li>;
 }

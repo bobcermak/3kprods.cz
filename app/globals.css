@@ -30,7 +30,7 @@ html {
   line-height: 1.5rem;
   letter-spacing: -0.5%;
   color: var(--color-dark, #000222);
-  background-color: #1E1E1E;
+  background-color: var(--color-white, #FFFFFF);
   scroll-behavior: smooth;
   overscroll-behavior: none;
 }

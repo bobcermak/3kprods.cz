@@ -7,10 +7,9 @@ type UlProps = {
   className?: string;
   children: React.ReactNode;
 }
-const Ul = ({ type = "list-decimal", gap = "space-y-1", className, children }: UlProps) => {
-  const isOrdered: boolean = type === "list-decimal";
-  const Tag: "ol" | "ul" = isOrdered ? "ol" : "ul";
-  const classes: string = twMerge(type, gap, className);
+const Ul = ({ type = "list-disc", gap = "space-y-1", className, children }: UlProps) => {
+  const Tag: "ol" | "ul" | "menu" = type === "list-decimal" ? "ol" : type === "menu" ? "menu" : "ul";
+  const classes: string = twMerge(type !== "menu" ? type : "", gap, className);
   return <Tag className={classes}>{children}</Tag>;
 }
 export default Ul;
