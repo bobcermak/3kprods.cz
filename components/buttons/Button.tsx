@@ -15,7 +15,7 @@ type ButtonProps = {
   children: React.ReactNode
 }
 const Button: FC<ButtonProps> = ({ isLink = true, link = "#", variant = "primary", isArrow = true, noStyle = false, type, onClick, children }) => {
-  const baseStyles: string = `inline-block pl-6 ${isArrow ? "pr-3" : "pr-6"} py-3 no-underline rounded-[2.5rem] text-body font-bold text-center uppercase cursor-pointer w-fit backdrop-blur-xl backdrop-saturate-150 border border-white/20 duration-250 ease-in-out ${isArrow ? "group" : "hover:shadow-[0_0_25px_rgba(0,0,0,0.25)]"}`;
+  const baseStyles: string = `inline-block pl-6 ${isArrow ? "pr-3" : "pr-6"} py-3 no-underline rounded-[2.5rem] text-body font-bold text-center uppercase cursor-pointer w-fit backdrop-blur-xl backdrop-saturate-150 border border-white/20 duration-250 ease-in-out ${isArrow ? "group hover:shadow-[0_0_25px_rgba(0,0,0,0.25)]" : ""}`;
   const variantStyles: Record<"primary" | "secondary", string> = {
     primary: `bg-[#4461EF]/50 text-white hover:bg-[#4461EF]/70`,
     secondary: `bg-[#C7EFB3]/50 text-blue hover:bg-[#C7EFB3]/80`
