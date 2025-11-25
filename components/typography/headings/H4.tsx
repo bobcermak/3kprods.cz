@@ -11,7 +11,7 @@ type H4Props = {
   color?: TextColor,
   case?: TextCase,
   className?: string,
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 const H4 = ({ family = "font-raleway", style = "not-italic", size = "text-sub", weight = "font-semibold", leading = "leading-tight", color = "text-dark", align = "text-left", case: textCase, className, children }: H4Props) => {
   const classes: string = twMerge(family, style, size, weight, leading, color, align, textCase, className);

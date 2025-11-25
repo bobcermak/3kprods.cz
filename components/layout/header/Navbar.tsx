@@ -4,11 +4,11 @@ import type { FC } from 'react';
 import { Button, Ul } from '@/components';
 
 type NavbarProps = {
-    logo: string;
-    button: string;
-    classNameNav?: string;
-    classNameUl?: string;
-    children: React.ReactNode;
+    logo: string,
+    button: string,
+    classNameNav?: string,
+    classNameUl?: string,
+    children: React.ReactNode
 }
 const Navbar: FC<NavbarProps> = ({ logo, button, classNameNav, classNameUl, children }) => {
     return (

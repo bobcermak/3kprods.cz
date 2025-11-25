@@ -3,8 +3,8 @@ import { FC } from "react"
 import { P } from "@/components"
 
 type BadgeProps = {
-    icon?: boolean;
-    children?: React.ReactNode;
+    icon?: boolean,
+    children?: React.ReactNode
 }
 const Badge: FC<BadgeProps> = ({ icon = true, children }) => {
   return (

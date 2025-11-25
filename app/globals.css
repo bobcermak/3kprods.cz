@@ -21,6 +21,15 @@
   --color-white: #FFFFFF;
   --color-dark: #000222;
   --color-gold: #FF9A23;
+  /*Breakpoints*/
+  --breakpoint-sphone: 361px;
+  --breakpoint-phone: 401px;
+  --breakpoint-stablet: 641px;
+  --breakpoint-tablet: 761px;
+  --breakpoint-slaptop: 961px;
+  --breakpoint-mlaptop: 1024px;
+  --breakpoint-laptop: 1281px;
+  --breakpoint-desktop: 1537px;
 }
 
 html {

@@ -11,7 +11,7 @@ type H1Props = {
   color?: TextColor,
   case?: TextCase,
   className?: string,
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 const H1 = ({ family = "font-bungee", style = "not-italic", size = "text-heading", weight = "font-normal", leading = "leading-tight", color = "text-dark", align = "text-left", case: textCase = "uppercase", className, children }: H1Props) => {
   const classes: string = twMerge(family, style, size, weight, leading, color, align, textCase, className);
