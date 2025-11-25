@@ -8,3 +8,4 @@ export { default as Li } from './typography/list/Li';
 export { default as Button } from './buttons/Button';
 export { default as Navbar } from './header/Navbar';
 export { default as Badge } from './badges/Badge';
+export { default as InfoCard } from './cards/InfoCard';

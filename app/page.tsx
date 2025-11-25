@@ -1,4 +1,4 @@
-import { Navbar, Li, H1, P, Ul, Button, Badge, H2, H3 } from "@/components";
+import { Navbar, Li, H1, P, Ul, Button, Badge, H2, H3, InfoCard } from "@/components";
 import Image from "next/image";
 
 const Home = () => {
@@ -54,15 +54,34 @@ const Home = () => {
             </article>
               <figure>
                 <Image className="img-responsive" src="/images/content/prom-image.webp" alt="3kprods - maturák" loading="lazy" width={504} height={548}/>
-            </figure>
+              </figure>
           </div>
         </section>
       </header>
       <main>
-        <header>
-          <H2>Co vše zařídíme?</H2>
-          <H3>Všechno pro vaši <span>akci</span> - od světel až po poslední <span>sousto</span>!</H3>
-        </header>
+        <section>
+          <div>
+            <header>
+              <H2>Co vše zařídíme?</H2>
+              <H3>Všechno pro vaši <span>akci</span> - od světel až po poslední <span>sousto</span>!</H3>
+            </header>
+            <div>
+              <P>Pro vaše akce dokážeme zpracovat grafiku, připravit dekorace nebo vytisknout všechny potřebné tiskoviny.</P>
+              <Ul>
+                <Li><i className="fa-regular fa-user"></i>Děláme maturáky jinak - bez kompromisů, bez nudy.</Li>
+                <Li><i className="fa-solid fa-handshake-angle"></i>Každou práci dotáhneme do konce.</Li>
+              </Ul>
+            </div>
+            <div>
+              <Ul>
+                <Li><InfoCard icon={<i className="fa-solid fa-compact-disc"></i>} title="DJ">DJ? Máme ho v kapse</InfoCard></Li>
+                <Li><InfoCard icon={<i className="fa-solid fa-bolt"></i>} title="Osvětlení">Světla, co váš ples rozzáří</InfoCard></Li>
+                <Li><InfoCard icon={<i className="fa-solid fa-camera"></i>} title="Fotograf">Selfie i skupiny - máme je</InfoCard></Li>
+              </Ul>
+              <Button link="#" variant="secondary">Chci maturák!</Button>
+            </div>
+          </div>
+          </section>
       </main>
       {/* <footer>
 

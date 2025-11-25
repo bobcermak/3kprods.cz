@@ -15,8 +15,8 @@ type ButtonProps = {
 const Button: FC<ButtonProps> = ({ isLink = true, link = "#", variant = "primary", isArrow = true, onClick, children }) => {
   const baseStyles: string = `inline-block pl-6 ${isArrow ? "pr-3" : "pr-6"} py-3 no-underline rounded-[2.5rem] text-body font-bold text-center uppercase cursor-pointer w-fit backdrop-blur-xl backdrop-saturate-150 border border-white/20 transition-colors duration-250 ease-in-out ${isArrow ? "group" : ""}`;
   const variantStyles: Record<"primary" | "secondary", string> = {
-    primary: `bg-[#4461EF]/50 text-white hover:bg-[#4461EF]/70 hover:shadow-sm`,
-    secondary: `bg-[#C7EFB3]/50 text-blue hover:bg-[#C7EFB3]/70 hover:shadow-sm`
+    primary: `bg-[#4461EF]/50 text-white hover:bg-[#4461EF]/70`,
+    secondary: `bg-[#C7EFB3]/50 text-blue hover:bg-[#C7EFB3]/80`
   };
   const combinedClasses: string = twMerge(baseStyles, variantStyles[variant]);
   const external: boolean = link ? link.startsWith("http") : false;
