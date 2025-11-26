@@ -9,3 +9,6 @@ export { default as Button } from './buttons/Button';
 export { default as Navbar } from './layout/header/Navbar';
 export { default as Badge } from './badges/Badge';
 export { default as InfoCard } from './cards/InfoCard';
+export { default as NewsletterForm } from './form/NewsletterForm';
+export { default as FooterCredits } from './layout/footer/FooterCredits';
+export { default as PoweredBy } from './layout/footer/PoweredBy';

@@ -17,4 +17,4 @@ const InfoCard: FC<InfoCardProps> = ({ icon, title, children }) => {
     </div>
   )
 }
-export default InfoCard
+export default InfoCard;

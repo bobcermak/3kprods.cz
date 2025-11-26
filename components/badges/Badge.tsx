@@ -14,4 +14,4 @@ const Badge: FC<BadgeProps> = ({ icon = true, children }) => {
     </div>
   )
 }
-export default Badge
+export default Badge;

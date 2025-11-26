@@ -1,4 +1,6 @@
+import { Button } from "@/components";
 import { FC } from "react";
+// import sendNewsletterEmail from "@/server-actions/newsletter";
 
 type NewsletterFormProps = {
     placeholder?: string,
@@ -6,10 +8,20 @@ type NewsletterFormProps = {
     children?: React.ReactNode
 }
 const NewsletterForm: FC<NewsletterFormProps> = ({ placeholder, icon, children }) => {
-    // return (
-    //     <form action={}>
-
-    //     </form>
-    // )
+    // const handleSubmit = async (formData: FormData) => {
+    //     "use server";
+    //     const email = formData.get("email") as string;
+    //     await sendNewsletterEmail(email);
+    // }
+    return (
+        // action={handleSubmit}
+        <form>
+            <div>
+                {icon}
+                <input type="text" name="email" placeholder={placeholder}/>
+            </div>
+            <Button isLink={false} type="submit">{children}</Button>
+        </form>
+    )
 }
 export default NewsletterForm;
