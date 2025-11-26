@@ -1,4 +1,4 @@
-import { P, H3 } from '@/components'
+import { H3, P } from '@/components'
 import { FC } from 'react'
 
 type InfoCardProps = {

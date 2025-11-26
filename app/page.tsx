@@ -1,5 +1,4 @@
-import { Navbar, Li, H1, P, Ul, Button, Badge, H2, H3, InfoCard, H4, NewsletterForm, FooterCredits } from "@/components";
-import Link from "next/link";
+import { H1, H2, H3, H4, P, Ul, Li, Button, Navbar, Badge, InfoCard } from "@/components";
 import Image from "next/image";
 
 const Home = () => {
@@ -20,8 +19,8 @@ const Home = () => {
               <P>Jsme parta z <strong>Liberce</strong> a <strong>maturitní plesy</strong> máme v malíku. Zařídíme <strong>DJ, moderátora, světla</strong> i <strong>výzdobu</strong> - vy jen dorazíte v šatech a oblecích.</P>
             </header>
             <Ul>
-              <Li><Button link="#">Pusťme se do toho</Button></Li>
-              <Li><Button link="#" variant="secondary" isArrow={false}>Kontaktuj nás</Button></Li>
+              <Li><Button href="#contact-us">Pusťme se do toho</Button></Li>
+              <Li><Button isLink={true} href="#" variant="secondary" isArrow={false}>Kontaktuj nás</Button></Li>
             </Ul>
           </div>
           <Ul>
@@ -50,7 +49,7 @@ const Home = () => {
                 </div>
               </div>
               <footer>
-                <Button link="#" variant="secondary">Kontaktuj nás</Button>
+                <Button href="#" variant="secondary">Kontaktuj nás</Button>
               </footer>
             </article>
               <figure>
@@ -79,7 +78,7 @@ const Home = () => {
                 <Li><InfoCard icon={<i className="fa-solid fa-bolt"></i>} title="Osvětlení">Světla, co váš ples rozzáří</InfoCard></Li>
                 <Li><InfoCard icon={<i className="fa-solid fa-camera"></i>} title="Fotograf">Selfie i skupiny - máme je</InfoCard></Li>
               </Ul>
-              <Button link="#" variant="secondary">Chci maturák!</Button>
+              <Button href="#" variant="secondary">Chci maturák!</Button>
             </div>
           </div>
           <div>
@@ -91,7 +90,7 @@ const Home = () => {
                 <P>Na co jsme machři a co dávno zvládáme levou <b>zadní</b>!</P>
               </div>
               <footer>
-                <Button link="#" isArrow={false}>Naše projekty</Button>
+                <Button href="#" isArrow={false}>Naše projekty</Button>
               </footer>
             </article>
             <figure className="slaptop:hidden">
@@ -143,45 +142,6 @@ const Home = () => {
           </figure>
         </section>
       </main>
-      <footer>
-        <section>
-          <div>
-            <header>
-              <H2>Jednoduše nám <span>napište</span> nebo <span>zavolejte</span>.</H2>
-            </header>
-            <div>
-              <Ul>
-                <Li>
-                  <i className="fa-solid fa-phone"></i>
-                  <div>
-                    <Button link="tel:+420722145257" noStyle={true} hover="text-light-blue">+420 722 145 257</Button>
-                    <Button link="tel:+420739145788" noStyle={true} hover="text-light-blue">+420 739 145 788</Button>
-                  </div>
-                </Li>
-                <Li>
-                  <i className="fa-solid fa-envelope"></i>
-                  <Button link="mailto:info@3kprods.cz" noStyle={true} hover="text-light-blue">info@3kprods.cz</Button>
-                </Li>
-                <Li>
-                  <i className="fa-solid fa-location-dot"></i>
-                  <Button link="https://maps.app.goo.gl/Z6ivpNXnn94nXLeP7" noStyle={true} hover="text-light-blue">Liberec, Liberecký kraj, Česká Republika</Button>
-                </Li>
-              </Ul>
-            </div>
-          </div>
-          <div>
-            <div>
-              <Link href="/"><Image className="img-responsive" src="/images/assets/logo.webp" alt="3kprods - logo" loading="lazy" width={100} height={100}/></Link>
-              <H3>Rychle a efektivně na eventy a marketing!</H3>
-            </div>
-            <div>
-              <P>Nenechte si nic ujít! Přihlaste se k našemu <span>newsletteru</span> a buďte vždy o krok napřed.</P>
-              <NewsletterForm icon={<i className="fa-solid fa-envelope"></i>} placeholder="example@domain.com">Chci začít</NewsletterForm>
-            </div>
-          </div>
-        </section>
-        <FooterCredits year={2025} companyName="3K Productions" socialLinks={[{social: <i className="fa-brands fa-instagram"></i>, url: "https://www.instagram.com/3kproductions/"}, {social: <i className="fa-brands fa-facebook"></i>, url: "https://www.facebook.com/3kproductions"}, {social: <i className="fa-brands fa-tiktok"></i>, url: "https://www.tiktok.com/@3kproductions"}, {social: <i className="fa-brands fa-linkedin-in"></i>, url: "https://www.linkedin.com/company/3kproductions"}]}/>
-      </footer>
     </>
   )
 }

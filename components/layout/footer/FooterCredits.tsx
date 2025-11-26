@@ -1,5 +1,5 @@
 import { P, Ul, Li, Button, PoweredBy } from "@/components";
-import React, { FC } from "react";
+import { FC } from "react";
 
 type SocialLink = {
     social: React.ReactNode,
@@ -21,7 +21,7 @@ const FooterCredits: FC<FooterCreditsProps> = ({ year, companyName, socialLinks,
         <Ul>
         {socialLinks?.map((item) => (
           <Li key={item.url} className={linksClassName}>
-            <Button link={item.url} noStyle={true} className={linksAClassName}>{item.social}</Button>
+            <Button href={item.url} noStyle={true} className={linksAClassName}>{item.social}</Button>
           </Li>
         ))}
         </Ul>

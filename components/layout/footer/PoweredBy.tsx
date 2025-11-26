@@ -1,4 +1,4 @@
-import { P } from "@/components";
+import { Button } from "@/components";
 import { FC } from "react";
 
 type PoweredByProps = {
@@ -8,7 +8,7 @@ type PoweredByProps = {
 }
 const PoweredBy: FC<PoweredByProps> = ({ powered = "powered", firstName, lastName }) => {
   return (
-    <P>{powered} by #{firstName}{lastName}</P>
+    <Button href="#" noStyle={true}>{powered} by #{firstName}{lastName}</Button>
   )
 }
 export default PoweredBy;

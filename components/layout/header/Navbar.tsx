@@ -17,7 +17,7 @@ const Navbar: FC<NavbarProps> = ({ logo, button, classNameNav, classNameUl, chil
             <Ul type="menu" className={classNameUl}>
                 {children}
             </Ul>
-            <Button link="#">{button}</Button>
+            <Button href="#">{button}</Button>
         </nav>
     )
 }
