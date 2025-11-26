@@ -5,10 +5,11 @@ type PoweredByProps = {
     powered?: string,
     firstName?: string,
     lastName?: string,
+    link: string
 }
-const PoweredBy: FC<PoweredByProps> = ({ powered = "powered", firstName, lastName }) => {
+const PoweredBy: FC<PoweredByProps> = ({ powered = "powered", firstName, lastName, link }) => {
   return (
-    <Button href="#" noStyle={true}>{powered} by #{firstName}{lastName}</Button>
+    <Button href={link} noStyle={true}>{powered} by #{firstName}{lastName}</Button>
   )
 }
 export default PoweredBy;

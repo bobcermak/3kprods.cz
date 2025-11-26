@@ -17,7 +17,7 @@ const FooterCredits: FC<FooterCreditsProps> = ({ year, companyName, socialLinks,
   return (
     <section className={className}>
         <P>&copy; {year} {companyName} - Všechna práva vyhrazena</P>
-        <PoweredBy firstName="Bob" lastName="Cermak"/>
+        <PoweredBy firstName="Bob" lastName="Cermak" link="https://www.linkedin.com/in/bohuslav-%C4%8Derm%C3%A1k-0020ba376/"/>
         <Ul>
         {socialLinks?.map((item) => (
           <Li key={item.url} className={linksClassName}>

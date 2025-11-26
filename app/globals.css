@@ -30,6 +30,13 @@
   --breakpoint-mlaptop: 1024px;
   --breakpoint-laptop: 1281px;
   --breakpoint-desktop: 1537px;
+  /*Widths*/
+  --width-container: 90vw;
+  --width-container: 90svw;
+  --width-content: 80vw;
+  --width-content: 80svw;
+  --width-section: 56vw;
+  --width-section: 56svw;
 }
 
 html {

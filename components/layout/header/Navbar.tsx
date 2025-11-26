@@ -8,16 +8,17 @@ type NavbarProps = {
     button: string,
     classNameNav?: string,
     classNameUl?: string,
+    href: string,
     children: React.ReactNode
 }
-const Navbar: FC<NavbarProps> = ({ logo, button, classNameNav, classNameUl, children }) => {
+const Navbar: FC<NavbarProps> = ({ logo, button, classNameNav, classNameUl, href, children }) => {
     return (
         <nav className={classNameNav}>
             <Link href="/"><Image className="img-responsive" src={logo} alt="3kprods - logo" loading="lazy" width={100} height={100}/></Link>
             <Ul type="menu" className={classNameUl}>
                 {children}
             </Ul>
-            <Button href="#">{button}</Button>
+            <Button href={href}>{button}</Button>
         </nav>
     )
 }

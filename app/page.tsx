@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <header>
-        <Navbar logo="/images/assets/logo.webp" button="Jdeme na to">
+        <Navbar logo="/images/assets/logo.webp" button="Jdeme na to" classNameNav="flex px-3 py-1" classNameUl="" href="tel:+420722145257">
           <Li>Domů</Li>
           <Li>O nás</Li>
           <Li>Partnerství</Li>
@@ -19,8 +19,8 @@ const Home = () => {
               <P>Jsme parta z <strong>Liberce</strong> a <strong>maturitní plesy</strong> máme v malíku. Zařídíme <strong>DJ, moderátora, světla</strong> i <strong>výzdobu</strong> - vy jen dorazíte v šatech a oblecích.</P>
             </header>
             <Ul>
-              <Li><Button href="#contact-us">Pusťme se do toho</Button></Li>
-              <Li><Button isLink={true} href="#" variant="secondary" isArrow={false}>Kontaktuj nás</Button></Li>
+              <Li><Button href="tel:+420722145257">Pusťme se do toho</Button></Li>
+              <Li><Button href="#contact-us" variant="secondary" isArrow={false}>Kontaktuj nás</Button></Li>
             </Ul>
           </div>
           <Ul>
@@ -49,7 +49,7 @@ const Home = () => {
                 </div>
               </div>
               <footer>
-                <Button href="#" variant="secondary">Kontaktuj nás</Button>
+                <Button href="#contact-us" variant="secondary">Kontaktuj nás</Button>
               </footer>
             </article>
               <figure>
@@ -78,7 +78,7 @@ const Home = () => {
                 <Li><InfoCard icon={<i className="fa-solid fa-bolt"></i>} title="Osvětlení">Světla, co váš ples rozzáří</InfoCard></Li>
                 <Li><InfoCard icon={<i className="fa-solid fa-camera"></i>} title="Fotograf">Selfie i skupiny - máme je</InfoCard></Li>
               </Ul>
-              <Button href="#" variant="secondary">Chci maturák!</Button>
+              <Button href="tel:+420722145257" variant="secondary">Chci maturák!</Button>
             </div>
           </div>
           <div>
@@ -90,7 +90,7 @@ const Home = () => {
                 <P>Na co jsme machři a co dávno zvládáme levou <b>zadní</b>!</P>
               </div>
               <footer>
-                <Button href="#" isArrow={false}>Naše projekty</Button>
+                <Button href="https://www.3kprods.cz/" isArrow={false}>Naše projekty</Button>
               </footer>
             </article>
             <figure className="slaptop:hidden">
