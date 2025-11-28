@@ -4,7 +4,7 @@ import Image from "next/image";
 const Home = () => {
   return (
     <>
-      <header className="bg-[linear-gradient(90deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)]">
+      <header className="bg-[linear-gradient(86deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)]">
         <Navbar logo="/images/assets/logo.webp" button="Jdeme na to" classNameNav="flex justify-between px-3 py-1" classNameUl="" href="tel:+420722145257">
           <Li>Domů</Li>
           <Li>O nás</Li>
