@@ -96,7 +96,7 @@ export default function RootLayout({
           </div>
           <div>
             <div>
-              <Button href="/" noStyle={true}><Image className="img-responsive" src="/images/assets/logo.webp" alt="3kprods - logo" loading="lazy" width={100} height={100}/></Button>
+              <Button href="/" noStyle={true} ariaLabel="3kprods - logo"><Image className="img-responsive" src="/images/assets/logo.webp" alt="3kprods - logo" loading="lazy" width={100} height={100}/></Button>
               <H3>Rychle a efektivně na eventy a marketing!</H3>
             </div>
             <div>
@@ -105,7 +105,7 @@ export default function RootLayout({
             </div>
           </div>
         </section>
-        <FooterCredits year={2025} companyName="3K Productions" socialLinks={[{social: <i className="fa-brands fa-instagram"></i>, url: "https://www.instagram.com/3kproductions/"}, {social: <i className="fa-brands fa-facebook"></i>, url: "https://www.facebook.com/3kproductions"}, {social: <i className="fa-brands fa-tiktok"></i>, url: "https://www.tiktok.com/@3kproductions"}, {social: <i className="fa-brands fa-linkedin-in"></i>, url: "https://www.linkedin.com/company/3kproductions"}]}/>
+        <FooterCredits year={2025} companyName="3K Productions" socialLinks={[{social: <i className="fa-brands fa-instagram"></i>, url: "https://www.instagram.com/3kprods/", ariaLabel: "Instagram"}, {social: <i className="fa-brands fa-tiktok"></i>, url: "https://www.tiktok.com/@3kprods", ariaLabel: "TikTok"}, {social: <i className="fa-brands fa-linkedin-in"></i>, url: "https://www.linkedin.com/company/3kprods/", ariaLabel: "LinkedIn"}]}/>
       </footer>
     </body>
     </html>

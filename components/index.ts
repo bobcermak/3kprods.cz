@@ -12,3 +12,4 @@ export { default as InfoCard } from './cards/InfoCard';
 export { default as NewsletterForm } from './form/NewsletterForm';
 export { default as FooterCredits } from './layout/footer/FooterCredits';
 export { default as PoweredBy } from './layout/footer/PoweredBy';
+export { default as Hamburger } from './layout/header/Hamburger';

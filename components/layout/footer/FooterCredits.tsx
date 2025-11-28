@@ -3,7 +3,8 @@ import { FC } from "react";
 
 type SocialLink = {
     social: React.ReactNode,
-    url: string
+    url: string,
+    ariaLabel: string
 }
 type FooterCreditsProps = {
     year: number,
@@ -21,7 +22,7 @@ const FooterCredits: FC<FooterCreditsProps> = ({ year, companyName, socialLinks,
         <Ul>
         {socialLinks?.map((item) => (
           <Li key={item.url} className={linksClassName}>
-            <Button href={item.url} noStyle={true} className={linksAClassName}>{item.social}</Button>
+            <Button href={item.url} noStyle={true} className={linksAClassName} ariaLabel={item.ariaLabel}>{item.social}</Button>
           </Li>
         ))}
         </Ul>

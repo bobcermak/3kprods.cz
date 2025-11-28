@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { FC } from 'react';
-import { Button, Ul } from '@/components';
+import { Button, Ul, Hamburger } from '@/components';
 
 type NavbarProps = {
     logo: string,
@@ -19,6 +19,7 @@ const Navbar: FC<NavbarProps> = ({ logo, button, classNameNav, classNameUl, href
                 {children}
             </Ul>
             <Button href={href}>{button}</Button>
+            <Hamburger/>
         </nav>
     )
 }
