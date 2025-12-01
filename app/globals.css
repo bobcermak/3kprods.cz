@@ -21,6 +21,10 @@
   --color-white: #FFFFFF;
   --color-dark: #000222;
   --color-gold: #FF9A23;
+  /*Shadows*/
+  --shadow-primary: 0px 4px 12px 0px rgba(0, 2, 34, 0.25);
+  --shadow-secondary: 0px 4px 12px 0px rgba(0, 2, 34, 0.5);
+  --inner-shadow-primary: inset 0px 4px 12px 0px rgba(0, 2, 34, 0.25);
   /*Breakpoints*/
   --breakpoint-sphone: 361px;
   --breakpoint-phone: 401px;
@@ -78,4 +82,10 @@ body {
   height: auto;
   margin: 0;
   padding: 0;
+}
+
+/*Inner shadow*/
+
+.inner-shadow-primary {
+  box-shadow: var(--inner-shadow-primary, inset 0px 4px 12px 0px rgba(0, 2, 34, 0.25));
 }
