@@ -1,9 +1,9 @@
 "use client";
 
 import { Button } from '@/components'
-import { FC, useState } from 'react'
+import { useState } from 'react'
 
-const Hamburger: FC = () => {
+const Hamburger = () => {
   //Hooks
   const [isOpen, setIsOpen] = useState(false);
 
