@@ -89,3 +89,9 @@ body {
 .inner-shadow-primary {
   box-shadow: var(--inner-shadow-primary, inset 0px 4px 12px 0px rgba(0, 2, 34, 0.25));
 }
+
+@media screen and (min-width: 1281px) {
+  .inner-shadow-none {
+    box-shadow: none;
+  }
+}
