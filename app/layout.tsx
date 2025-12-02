@@ -79,17 +79,17 @@ export default function RootLayout({
                 <Li>
                   <i className="fa-solid fa-phone"></i>
                   <div>
-                    <Button href="tel:+420722145257" noStyle={true} hover="text-light-blue" className="underline">+420 722 145 257</Button>
-                    <Button href="tel:+420739145788" noStyle={true} hover="text-light-blue" className="underline">+420 739 145 788</Button>
+                    <Button href="tel:+420722145257" noStyle={true} hover="hover:text-light-blue" className="underline">+420 722 145 257</Button>
+                    <Button href="tel:+420739145788" noStyle={true} hover="hover:text-light-blue" className="underline">+420 739 145 788</Button>
                   </div>
                 </Li>
                 <Li>
                   <i className="fa-solid fa-envelope"></i>
-                  <Button href="mailto:info@3kprods.cz" noStyle={true} hover="text-light-blue" className="underline">info@3kprods.cz</Button>
+                  <Button href="mailto:info@3kprods.cz" noStyle={true} hover="hover:text-light-blue" className="underline">info@3kprods.cz</Button>
                 </Li>
                 <Li>
                   <i className="fa-solid fa-location-dot"></i>
-                  <Button href="https://maps.app.goo.gl/Z6ivpNXnn94nXLeP7" noStyle={true} hover="text-light-blue" className="underline">Liberec, Liberecký kraj, Česká Republika</Button>
+                  <Button href="https://maps.app.goo.gl/Z6ivpNXnn94nXLeP7" noStyle={true} hover="hover:text-light-blue" className="underline">Liberec, Liberecký kraj, Česká Republika</Button>
                 </Li>
               </Ul>
             </div>

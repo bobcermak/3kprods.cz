@@ -6,11 +6,11 @@ const Home = () => {
     <>
       <header className="bg-[linear-gradient(86deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)]">
         <Navbar logo="/images/assets/logo.webp" button="Jdeme na to" className="fixed z-50 left-0 right-0 laptop:left-[50%] laptop:translate-x-[-50%] flex items-center justify-between px-3 py-1 rounded-bl-[48px] rounded-br-[48px] bg-white/10 backdrop-blur-[100px] shadow-primary laptop:w-container" href="tel:+420722145257">
-          <Li size="text-body" weight={"font-bold"} textCase={"uppercase"} color={"text-green"} className="laptop:ml-21">Domů</Li>
-          <Li size="text-body" weight={"font-bold"} textCase={"uppercase"} color={"text-white"}>O nás</Li>
-          <Li size="text-body" weight={"font-bold"} textCase={"uppercase"} color={"text-white"}>Partnerství</Li>
-          <Li size="text-body" weight={"font-bold"} textCase={"uppercase"} color={"text-white"}>Náš team</Li>
-          <Li size="text-body" weight={"font-bold"} textCase={"uppercase"} color={"text-white"}>Kontakty</Li>
+          <Li className="laptop:ml-21"><Button href="/" noStyle={true} hover="hover:text-dark" className="text-green uppercase font-bold text-body">Domů</Button></Li>
+          <Li><Button href="#welcome" noStyle={true} hover="hover:text-dark" className="text-white uppercase font-bold text-body">O nás</Button></Li>
+          <Li><Button href="https://www.3kprods.cz/partnership.html" noStyle={true} hover="hover:text-dark" className="text-white uppercase font-bold text-body">Partnerství</Button></Li>
+          <Li><Button href="https://www.3kprods.cz/team.html" noStyle={true} hover="hover:text-dark" className="text-white uppercase font-bold text-body">Náš team</Button></Li>
+          <Li><Button href="#contact-us" noStyle={true} hover="hover:text-dark" className="text-white uppercase font-bold text-body">Kontakty</Button></Li>
           <Li className="laptop:hidden"><Button href="#contact-us" variant="secondary" isArrow={false}>Kontaktuj nás</Button></Li>
         </Navbar>
         <section id="welcome">
