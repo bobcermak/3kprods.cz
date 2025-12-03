@@ -1,6 +1,6 @@
-import Image from "next/image"
-import { FC } from "react"
-import { P } from "@/components"
+import Image from "next/image";
+import { FC } from "react";
+import { P } from "@/components";
 
 type BadgeProps = {
     icon?: boolean,
