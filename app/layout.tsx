@@ -67,6 +67,12 @@ export default function RootLayout({
         />
     </head>
     <body>
+      <Ul className="absolute">
+        <Li><i className="fa-brands fa-instagram"></i></Li>
+        <Li><i className="fa-brands fa-facebook"></i></Li>
+        <Li><i className="fa-brands fa-tiktok"></i></Li>
+        <Li><i className="fa-brands fa-linkedin-in"></i></Li>
+      </Ul>
       {children}
       <footer>
         <section id="contact-us">

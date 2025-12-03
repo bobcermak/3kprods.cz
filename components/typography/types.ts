@@ -1,6 +1,5 @@
 export type FontFamily = "font-raleway" | "font-bungee" | null;
 export type FontStyle = "italic" | "not-italic" | null;
-export type TextSize = "text-body" | "text-sub" | "text-title" | "text-heading" | "text-display" | null;
 export type FontWeight = "font-light" | "font-normal" | "font-medium" | "font-semibold" | "font-bold" | "font-extrabold" | "font-black" | null;
 export type Leading = "leading-tight" | "leading-snug" | null;
 export type TextAlign = "text-left" | "text-center" | "text-right" | "text-justify" | null;

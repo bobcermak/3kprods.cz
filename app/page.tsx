@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <header className="bg-[linear-gradient(86deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)]">
-        <Navbar logo="/images/assets/logo.webp" button="Jdeme na to" className="fixed z-50 left-0 right-0 laptop:left-[50%] laptop:translate-x-[-50%] flex items-center justify-between px-3 py-1 rounded-bl-[48px] rounded-br-[48px] bg-white/10 backdrop-blur-[100px] shadow-primary laptop:w-container" href="tel:+420722145257">
+        <Navbar logo="/images/assets/logo.webp" button="Jdeme na to" className="fixed z-50 left-0 right-0 laptop:left-[50%] laptop:translate-x-[-50%] flex items-center justify-between px-3 py-1 rounded-bl-[3rem] rounded-br-[3rem] bg-white/10 backdrop-blur-[100px] shadow-primary laptop:w-container" href="tel:+420722145257">
           <Li className="laptop:ml-21"><Button href="/" noStyle={true} hover="hover:text-dark active:text-dark" className="text-green uppercase font-bold text-body">Domů</Button></Li>
           <Li><Button href="#welcome" noStyle={true} hover="hover:text-dark active:text-dark" className="text-white uppercase font-bold text-body">O nás</Button></Li>
           <Li><Button href="https://www.3kprods.cz/partnership.html" noStyle={true} hover="hover:text-dark active:text-dark" className="text-white uppercase font-bold text-body">Partnerství</Button></Li>
@@ -13,10 +13,10 @@ const Home = () => {
           <Li><Button href="#contact-us" noStyle={true} hover="hover:text-dark active:text-dark" className="text-white uppercase font-bold text-body">Kontakty</Button></Li>
           <Li className="laptop:hidden"><Button href="#contact-us" variant="secondary" isArrow={false}>Kontaktuj nás</Button></Li>
         </Navbar>
-        <section id="welcome">
+        <section className="mt-47" id="welcome">
           <div>
             <header>
-              <H1>Tvůj zážitek. Náše <span>práce</span>.</H1>
+              <H1 color={"text-white"} className="text-display">Tvůj zážitek. Náše <span>práce</span>.</H1>
               <P>Jsme parta z <strong>Liberce</strong> a <strong>maturitní plesy</strong> máme v malíku. Zařídíme <strong>DJ, moderátora, světla</strong> i <strong>výzdobu</strong> - vy jen dorazíte v šatech a oblecích.</P>
             </header>
             <Ul>
