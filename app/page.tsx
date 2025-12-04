@@ -1,10 +1,11 @@
 import { H1, H2, H3, H4, P, Ul, Li, Button, Navbar, Badge, InfoCard } from "@/components";
 import Image from "next/image";
+import Link from "next/link";
 
 const Home = () => {
   return (
     <>
-      <header className="bg-[linear-gradient(86deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)]">
+      <header className="bg-[linear-gradient(46deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)] laptop:bg-[linear-gradient(86deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)]">
         <Navbar logo="/images/assets/logo.webp" button="Jdeme na to" className="fixed z-50 left-0 right-0 laptop:left-[50%] laptop:translate-x-[-50%] flex items-center justify-between px-3 py-1 rounded-bl-[3rem] rounded-br-[3rem] bg-white/10 backdrop-blur-[100px] shadow-primary laptop:w-container" href="tel:+420722145257">
           <Li className="laptop:ml-21"><Button href="/" noStyle={true} hover="hover:text-dark active:text-dark" className="text-green uppercase font-bold text-body">Domů</Button></Li>
           <Li><Button href="#welcome" noStyle={true} hover="hover:text-dark active:text-dark" className="text-white uppercase font-bold text-body">O nás</Button></Li>
@@ -13,22 +14,21 @@ const Home = () => {
           <Li><Button href="#contact-us" noStyle={true} hover="hover:text-dark active:text-dark" className="text-white uppercase font-bold text-body">Kontakty</Button></Li>
           <Li className="laptop:hidden"><Button href="#contact-us" variant="secondary" isArrow={false}>Kontaktuj nás</Button></Li>
         </Navbar>
-        <section className="mt-47" id="welcome">
-          <div>
-            <header>
-              <H1 color={"text-white"} className="text-display">Tvůj zážitek. Náše <span>práce</span>.</H1>
-              <P>Jsme parta z <strong>Liberce</strong> a <strong>maturitní plesy</strong> máme v malíku. Zařídíme <strong>DJ, moderátora, světla</strong> i <strong>výzdobu</strong> - vy jen dorazíte v šatech a oblecích.</P>
+        <section className="mt-47 mx-6" id="welcome">
+          <div className="flex flex-col gap-10">
+            <header className="flex flex-col gap-10">
+              <H1 size="text-title" color="text-white" className="relative w-[320px] laptop:max-w-188 after:content[''] after:absolute after:right-0 after:bottom-[-30px] after:bg-blue after:w-[68px] after:h-[200px] after:rounded-[20px] z-1 after:-z-1">Tvůj zážitek. Náše <span className="text-green">práce</span>.</H1>
+              <P color="text-white" weight="font-bold">Jsme parta z <strong className="text-green">Liberce</strong> a <strong className="text-green">maturitní plesy</strong> máme v malíku. Zařídíme <strong className="text-green">DJ, moderátora, světla</strong> i <strong className="text-green">výzdobu</strong> - vy jen dorazíte v šatech a oblecích.</P>
             </header>
-            <Ul>
+            <Ul className="flex flex-col gap-4">
               <Li><Button href="tel:+420722145257">Pusťme se do toho</Button></Li>
               <Li><Button href="#contact-us" variant="secondary" isArrow={false}>Kontaktuj nás</Button></Li>
             </Ul>
           </div>
           <Ul>
-            <Li><i className="fa-brands fa-instagram"></i></Li>
-            <Li><i className="fa-brands fa-facebook"></i></Li>
-            <Li><i className="fa-brands fa-tiktok"></i></Li>
-            <Li><i className="fa-brands fa-linkedin-in"></i></Li>
+            <Li><Link className="text-white text-[28px] bg-dark px-[14.75px] py-[10.6px] rounded-full" href="https://www.instagram.com/3kprods/"><i className="fa-brands fa-instagram"></i></Link></Li>
+            <Li><Link className="text-white text-[28px] bg-dark px-[14.75px] py-[10.6px] rounded-full" href="https://www.tiktok.com/@3kprods"><i className="fa-brands fa-tiktok"></i></Link></Li>
+            <Li><Link className="text-white text-[28px] bg-dark px-[14.75px] py-[10.6px] rounded-full" href="https://www.linkedin.com/company/3kprods/"><i className="fa-brands fa-linkedin-in"></i></Link></Li>
           </Ul>
           <div>
             <article>

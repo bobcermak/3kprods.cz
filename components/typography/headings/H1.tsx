@@ -1,9 +1,9 @@
-import { twMerge } from "tailwind-merge";
-import { FontFamily, FontStyle, FontWeight, Leading, TextAlign, TextColor, TextCase } from "../types";
+import { FontFamily, FontStyle, TextSize, FontWeight, Leading, TextAlign, TextColor, TextCase } from "../types";
 
 type H1Props = {
   family?: FontFamily,
   style?: FontStyle,
+  size?: TextSize,
   weight?: FontWeight,
   leading?: Leading,
   align?: TextAlign,
@@ -12,8 +12,8 @@ type H1Props = {
   className?: string,
   children: React.ReactNode
 }
-const H1 = ({ family = "font-bungee", style = "not-italic", weight = "font-normal", leading = "leading-tight", color = "text-dark", align = "text-left", case: textCase = "uppercase", className = "text-heading", children }: H1Props) => {
-  const classes: string = twMerge(family, style, weight, leading, color, align, textCase, className);
+const H1 = ({ family = "font-bungee", style = "not-italic", size = "text-heading", weight = "font-normal", leading = "leading-tight", color = "text-dark", align = "text-left", case: textCase = "uppercase", className, children }: H1Props) => {
+  const classes: string = [family, style, size, weight, leading, color, align, textCase, className].join(" ");
   return <h1 className={classes}>{children}</h1>;
 }
 export default H1;

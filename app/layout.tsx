@@ -1,5 +1,6 @@
 import { H2, H3, P, Ul, Li, Button, NewsletterForm, FooterCredits } from "@/components";
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -68,10 +69,9 @@ export default function RootLayout({
     </head>
     <body>
       <Ul className="absolute">
-        <Li><i className="fa-brands fa-instagram"></i></Li>
-        <Li><i className="fa-brands fa-facebook"></i></Li>
-        <Li><i className="fa-brands fa-tiktok"></i></Li>
-        <Li><i className="fa-brands fa-linkedin-in"></i></Li>
+        <Li><Link href="https://www.instagram.com/3kprods/"><i className="fa-brands fa-instagram"></i></Link></Li>
+        <Li><Link href="https://www.tiktok.com/@3kprods"><i className="fa-brands fa-tiktok"></i></Link></Li>
+        <Li><Link href="https://www.linkedin.com/company/3kprods/"><i className="fa-brands fa-linkedin-in"></i></Link></Li>
       </Ul>
       {children}
       <footer>

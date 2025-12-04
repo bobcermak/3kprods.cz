@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { type FC, useState, useEffect } from 'react';
 import React from 'react';
 import { Button, Ul, Hamburger } from '@/components';
-import { twMerge } from "tailwind-merge";
 
 type NavbarProps = {
     logo: string,
@@ -18,7 +17,7 @@ const Navbar: FC<NavbarProps> = ({ logo, button, className, href, children }) =>
     //Hooks
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const blur: string = `after:content-[''] after:fixed after:top-0 after:left-0 after:w-screen after:h-screen after:-z-10 after:bg-[linear-gradient(77deg,#1C2E55_0%,#243c91_25%,#4461ef_49%,#98a8f7_100%)]`;
-    const classes: string = twMerge(className, isMenuOpen && blur);
+    const classes: string = [className, isMenuOpen && blur].filter(Boolean).join(" ");
     useEffect(() => {
         if (isMenuOpen) document.body.style.overflow = "hidden"; 
         else document.body.style.overflow = "";
