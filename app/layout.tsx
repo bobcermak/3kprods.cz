@@ -67,7 +67,7 @@ export default function RootLayout({
         />
     </head>
     <body>
-      <Ul className="absolute flex gap-4 px-6 py-4 w-fit border border-white/40 rounded-full glass">
+      <Ul className="hidden fixed left-0 top-0 ml-35 mt-[311px] slaptop:flex flex-col gap-10 px-4 py-6 w-fit bg-white/10 backdrop-blur-sm border border-white/40 rounded-[40px] shadow-md z-40">
         <Li><a target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.instagram.com/3kprods/"><i className="fa-brands fa-instagram"></i></a></Li>
         <Li><a target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.tiktok.com/@3kprods"><i className="fa-brands fa-tiktok"></i></a></Li>
         <Li><a target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.linkedin.com/company/3kprods/"><i className="fa-brands fa-linkedin-in"></i></a></Li>
