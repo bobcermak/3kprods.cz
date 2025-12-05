@@ -17,7 +17,7 @@ const Home = () => {
         <section className="mt-47 mx-6" id="welcome">
           <div className="flex flex-col gap-10">
             <header className="flex flex-col gap-10">
-              <H1 size="text-title" color="text-white" className="relative w-[320px] laptop:max-w-188 after:content[''] after:absolute after:right-0 after:bottom-[-30px] after:bg-blue after:w-[68px] after:h-[200px] after:rounded-[20px] z-1 after:-z-1">Tvůj zážitek. Náše <span className="text-green">práce</span>.</H1>
+              <H1 size="text-title" color="text-white" className="relative w-[319.5px] laptop:max-w-188 after:content[''] after:absolute after:right-0 after:bottom-[-30px] after:bg-blue after:w-[68px] after:h-[200px] after:rounded-[20px] z-1 after:-z-1">Tvůj zážitek. Náše <span className="text-green">práce</span>.</H1>
               <P color="text-white" weight="font-bold">Jsme parta z <strong className="text-green">Liberce</strong> a <strong className="text-green">maturitní plesy</strong> máme v malíku. Zařídíme <strong className="text-green">DJ, moderátora, světla</strong> i <strong className="text-green">výzdobu</strong> - vy jen dorazíte v šatech a oblecích.</P>
             </header>
             <Ul className="flex flex-col gap-4">
@@ -25,10 +25,10 @@ const Home = () => {
               <Li><Button href="#contact-us" variant="secondary" isArrow={false}>Kontaktuj nás</Button></Li>
             </Ul>
           </div>
-          <Ul>
-            <Li><Link className="text-white text-[28px] bg-dark px-[14.75px] py-[10.6px] rounded-full" href="https://www.instagram.com/3kprods/"><i className="fa-brands fa-instagram"></i></Link></Li>
-            <Li><Link className="text-white text-[28px] bg-dark px-[14.75px] py-[10.6px] rounded-full" href="https://www.tiktok.com/@3kprods"><i className="fa-brands fa-tiktok"></i></Link></Li>
-            <Li><Link className="text-white text-[28px] bg-dark px-[14.75px] py-[10.6px] rounded-full" href="https://www.linkedin.com/company/3kprods/"><i className="fa-brands fa-linkedin-in"></i></Link></Li>
+          <Ul className="flex gap-4 mx-auto mt-20 mb-[116px] px-6 py-4 w-fit border border-white/40 rounded-full glass">
+            <Li><a target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.instagram.com/3kprods/"><i className="fa-brands fa-instagram"></i></a></Li>
+            <Li><a target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.tiktok.com/@3kprods"><i className="fa-brands fa-tiktok"></i></a></Li>
+            <Li><a target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.linkedin.com/company/3kprods/"><i className="fa-brands fa-linkedin-in"></i></a></Li>
           </Ul>
           <div>
             <article>

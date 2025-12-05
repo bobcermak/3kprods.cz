@@ -1,6 +1,5 @@
 import { H2, H3, P, Ul, Li, Button, NewsletterForm, FooterCredits } from "@/components";
 import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -68,10 +67,10 @@ export default function RootLayout({
         />
     </head>
     <body>
-      <Ul className="absolute">
-        <Li><Link href="https://www.instagram.com/3kprods/"><i className="fa-brands fa-instagram"></i></Link></Li>
-        <Li><Link href="https://www.tiktok.com/@3kprods"><i className="fa-brands fa-tiktok"></i></Link></Li>
-        <Li><Link href="https://www.linkedin.com/company/3kprods/"><i className="fa-brands fa-linkedin-in"></i></Link></Li>
+      <Ul className="absolute flex gap-4 px-6 py-4 w-fit border border-white/40 rounded-full glass">
+        <Li><a target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.instagram.com/3kprods/"><i className="fa-brands fa-instagram"></i></a></Li>
+        <Li><a target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.tiktok.com/@3kprods"><i className="fa-brands fa-tiktok"></i></a></Li>
+        <Li><a target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.linkedin.com/company/3kprods/"><i className="fa-brands fa-linkedin-in"></i></a></Li>
       </Ul>
       {children}
       <footer>
