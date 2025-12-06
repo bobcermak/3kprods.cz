@@ -12,7 +12,7 @@
   --text-sub: 1.5625rem; /*25px*/
   --text-title: 2.4375rem; /*39px*/
   --text-heading: 3.8125rem; /*61px*/
-  --text-display: 5.75rem; /*92px*/
+  --text-display: 4.6875rem; /*75px*/
   /*Colors*/
   --color-blue: #1C2E55;
   --color-light-blue: #4461EF;
@@ -28,15 +28,19 @@
   /*Breakpoints*/
   --breakpoint-sphone: 361px;
   --breakpoint-phone: 401px;
+  --breakpoint-xphone: 541px;
   --breakpoint-stablet: 641px;
   --breakpoint-tablet: 761px;
   --breakpoint-slaptop: 961px;
   --breakpoint-mlaptop: 1024px;
   --breakpoint-laptop: 1281px;
   --breakpoint-desktop: 1537px;
+  --breakpoint-xdesktop: 1761px;
   /*Widths*/
   --width-container: 90vw;
   --width-container: 90svw;
+  --width-xcontent: 85vw;
+  --width-xcontent: 85svw;
   --width-content: 80vw;
   --width-content: 80svw;
   --width-section: 56vw;
@@ -93,5 +97,129 @@ body {
 @media screen and (min-width: 1281px) {
   .inner-shadow-none {
     box-shadow: none;
+  }
+}
+
+/*Container breakpoints*/
+
+.container-parent {
+  container-type: inline-size;
+}
+
+.badge-container {
+  container-type: inline-size;
+  margin-top: -2.25rem;
+}
+
+.badge-container--xdesktop {
+  container-type: inline-size;
+}
+
+@container (min-width: 419px) {
+  .badge-container {
+    margin-top: -1.65625rem;
+  }
+}
+
+@container (min-width: 408px) {
+  .badge-container--xdesktop {
+    margin-top: -1.65625rem;
+  }
+}
+
+/*Blurs*/
+
+.blur-setup {
+  position: relative;
+  overflow: hidden;
+}
+
+.blur-setup::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blur-setup::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blur-setup--green::before {
+  background-image: url(/images/vectors/blur-green.svg);
+}
+.blur-setup--green::after {
+  background-image: url(/images/vectors/blur-green.svg);
+}
+
+.blur-setup--blue::before {
+  background-image: url(/images/vectors/blur-blue.svg);
+}
+.blur-setup--blue::after {
+  background-image: url(/images/vectors/blur-blue.svg);
+}
+
+.blur-setup-hero-left::before {
+  left: -110%;
+  top: -20%;
+}
+
+.blur-setup-hero-right::after {
+  right: -40%;
+  top: 12.5%;
+}
+
+@media screen and (min-width: 541px) {
+  .blur-setup-hero-left::before {
+    left: -80%;
+  }
+}
+
+@media screen and (min-width: 861px) {
+  .blur-setup-hero-left::before {
+    left: -50%;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .blur-setup-hero-left::before {
+    left: -30%;
+    top: -40%;
+    width: 1200px;
+    height: 1200px;
+  }
+
+  .blur-setup-hero-right::after {
+    right: -45%;
+    top: 15%;
+    width: 1200px;
+    height: 1200px;
+  }
+}
+
+@media screen and (min-width: 1761px) {
+  .blur-setup-hero-left::before {
+    top: -55%;
+    left: -35%;
+    width: 1500px;
+    height: 1500px;
+  }
+
+  .blur-setup-hero-right::after {
+    right: -45%;
+    top: 15%;
+    width: 1500px;
+    height: 1500px;
   }
 }
