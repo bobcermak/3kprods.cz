@@ -107,7 +107,7 @@ export default function RootLayout({
             </div>
             <div>
               <P>Nenechte si nic ujít! Přihlaste se k našemu <span>newsletteru</span> a buďte vždy o krok napřed.</P>
-              <NewsletterForm icon={<i className="fa-solid fa-envelope"></i>} placeholder="example@domain.com">Chci začít</NewsletterForm>
+              <NewsletterForm icon={<i className="fa-solid fa-envelope"></i>} placeholder="example@domain.com">Odeslat</NewsletterForm>
             </div>
           </div>
         </section>
