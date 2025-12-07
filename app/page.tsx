@@ -6,12 +6,12 @@ const Home = () => {
     <>
       <header className="blur-setup blur-setup--green blur-setup-hero-left blur-setup-hero-right bg-[linear-gradient(46deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)] laptop:bg-[linear-gradient(86deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)]">
         <Navbar logo="/images/assets/logo.webp" button="Jdeme na to" className="fixed z-50 left-0 right-0 laptop:left-[50%] laptop:translate-x-[-50%] flex items-center justify-between px-3 py-1 rounded-bl-[3rem] rounded-br-[3rem] bg-white/10 backdrop-blur-[100px] shadow-primary laptop:w-container" href="tel:+420722145257">
-          <Li className="laptop:ml-21"><Button href="/" noStyle={true} hover="hover:text-dark active:text-dark transition-all duration-250" className="text-green uppercase font-bold text-body">Domů</Button></Li>
-          <Li><Button href="#welcome" noStyle={true} hover="hover:text-dark active:text-dark transition-all duration-250" className="text-white uppercase font-bold text-body">O nás</Button></Li>
-          <Li><Button href="https://www.3kprods.cz/partnership.html" noStyle={true} hover="hover:text-dark active:text-dark transition-all duration-250" className="text-white uppercase font-bold text-body">Partnerství</Button></Li>
-          <Li><Button href="https://www.3kprods.cz/team.html" noStyle={true} hover="hover:text-dark active:text-dark transition-all duration-250" className="text-white uppercase font-bold text-body">Náš team</Button></Li>
-          <Li><Button href="#contact-us" noStyle={true} hover="hover:text-dark active:text-dark transition-all duration-250" className="text-white uppercase font-bold text-body">Kontakty</Button></Li>
-          <Li className="laptop:hidden"><Button href="#contact-us" variant="secondary" isArrow={false}>Kontaktuj nás</Button></Li>
+          <Li className="laptop:ml-21 mb-0"><Button href="/" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-green uppercase font-bold text-body">Domů</Button></Li>
+          <Li><Button href="#welcome" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-bold text-body">O nás</Button></Li>
+          <Li><Button href="https://www.3kprods.cz/partnership.html" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-bold text-body">Partnerství</Button></Li>
+          <Li><Button href="https://www.3kprods.cz/team.html" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-bold text-body">Náš team</Button></Li>
+          <Li><Button href="#contact-us" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-bold text-body">Kontakty</Button></Li>
+          <Li className="laptop:hidden px-6 laptop:px-0"><Button href="#contact-us" variant="secondary" isArrow={false}>Kontaktuj nás</Button></Li>
         </Navbar>
         <section className="mt-47 stablet:mt-[297px] laptop:mt-[314px] stab mx-6 stablet:mx-auto stablet:w-content desktop:w-xcontent laptop:flex laptop:justify-between" id="welcome">
           <div className="flex flex-col gap-10">
