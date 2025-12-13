@@ -53,7 +53,7 @@ const Home = () => {
               </footer>
             </article>
             <figure className="relative mx-auto -my-9 w-[90%] h-[300px] z-10 mb-25 laptop:z-0 laptop:mx-none laptop:my-0 laptop:w-[404px] laptop:h-[505px] laptop:-ml-[152px] desktop:w-[434px] desktop:h-[529px] xdesktop:w-[504px] xdesktop:h-[548px]">
-              <Image className="img-responsive rounded-[40px]" src="/images/content/prom-image.webp" alt="3kprods - maturitního plesu" loading="lazy" width={504} height={548}/>
+              <Image className="img-responsive rounded-[40px]" src="/images/content/prom-image.webp" alt="3kprods - fotka maturitního plesu" loading="lazy" width={504} height={548}/>
             </figure>
           </div>
         </section>
