@@ -1,5 +1,5 @@
 import { H3, P } from '@/components';
-import { FC } from 'react';
+import { type FC } from 'react';
 
 type InfoCardProps = {
     icon?: React.ReactNode,

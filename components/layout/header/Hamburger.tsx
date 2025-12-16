@@ -1,5 +1,5 @@
 import { Button } from '@/components';
-import { FC } from 'react';
+import { type FC } from 'react';
 
 type HamburgerProps = {
   isOpen: boolean,

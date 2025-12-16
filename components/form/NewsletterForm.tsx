@@ -1,5 +1,5 @@
 import { Button } from "@/components";
-import { FC } from "react";
+import { type FC } from "react";
 // import sendNewsletterEmail from "@/server-actions/newsletter";
 
 type NewsletterFormProps = {

@@ -1,5 +1,5 @@
 import { P, Ul, Li, Button, PoweredBy } from "@/components";
-import { FC } from "react";
+import { type FC } from "react";
 
 type SocialLink = {
     social: React.ReactNode,
