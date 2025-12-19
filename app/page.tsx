@@ -1,7 +1,7 @@
 import { H1, H2, H3, H4, P, Ul, Li, Button, Navbar, Badge, InfoCard } from "@/components";
 import Image from "next/image";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
       <header className="blur-setup blur-setup--green blur-setup-hero-left blur-setup-hero-right bg-[linear-gradient(46deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)] laptop:bg-[linear-gradient(86deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)]">
@@ -145,4 +145,4 @@ const Home = () => {
     </>
   )
 }
-export default Home;
+export default HomePage;
