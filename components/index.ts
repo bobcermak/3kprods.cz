@@ -13,3 +13,4 @@ export { default as NewsletterForm } from './form/NewsletterForm';
 export { default as FooterCredits } from './layout/footer/FooterCredits';
 export { default as PoweredBy } from './layout/footer/PoweredBy';
 export { default as Hamburger } from './layout/header/Hamburger';
+export { default as Footer } from './layout/footer/Footer';

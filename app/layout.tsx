@@ -1,5 +1,4 @@
-import { H2, H3, P, Ul, Li, Button, NewsletterForm, FooterCredits } from "@/components";
-import Image from "next/image";
+import { Ul, Li, Navbar, Button, Footer } from "@/components";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -73,46 +72,18 @@ export default function RootLayout({
         <Li><a aria-label="TikTok" target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.tiktok.com/@3kprods"><i className="fa-brands fa-tiktok"></i></a></Li>
         <Li><a aria-label="LinkedIn" target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.linkedin.com/company/3kprods/"><i className="fa-brands fa-linkedin-in"></i></a></Li>
       </Ul>
+      <header>
+        <Navbar logo="/images/assets/logo.webp" button="Jdeme na to" className="fixed z-50 left-0 right-0 laptop:left-[50%] laptop:translate-x-[-50%] flex items-center justify-between px-3 py-1 rounded-bl-[3rem] rounded-br-[3rem] bg-white/10 backdrop-blur-[100px] shadow-primary laptop:w-container" href="tel:+420722145257">
+          <Li className="laptop:ml-21 mb-0"><Button href="/" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-green uppercase font-bold text-body">Domů</Button></Li>
+          <Li><Button href="#welcome" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-bold text-body">O nás</Button></Li>
+          <Li><Button href="https://www.3kprods.cz/partnership.html" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-bold text-body">Partnerství</Button></Li>
+          <Li><Button href="https://www.3kprods.cz/team.html" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-bold text-body">Náš team</Button></Li>
+          <Li><Button href="#contact-us" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-bold text-body">Kontakty</Button></Li>
+          <Li className="laptop:hidden px-6 laptop:px-0"><Button href="#contact-us" variant="secondary" isArrow={false}>Kontaktuj nás</Button></Li>
+        </Navbar>
+      </header>
       {children}
-      <footer>
-        <section id="contact-us">
-          <div>
-            <header>
-              <H2>Jednoduše nám <span>napište</span> nebo <span>zavolejte</span>.</H2>
-            </header>
-            <div>
-              <Ul>
-                <Li>
-                  <i className="fa-solid fa-phone"></i>
-                  <div>
-                    <Button href="tel:+420722145257" noStyle={true} hover="hover:text-light-blue" className="underline">+420 722 145 257</Button>
-                    <Button href="tel:+420739145788" noStyle={true} hover="hover:text-light-blue" className="underline">+420 739 145 788</Button>
-                  </div>
-                </Li>
-                <Li>
-                  <i className="fa-solid fa-envelope"></i>
-                  <Button href="mailto:info@3kprods.cz" noStyle={true} hover="hover:text-light-blue" className="underline">info@3kprods.cz</Button>
-                </Li>
-                <Li>
-                  <i className="fa-solid fa-location-dot"></i>
-                  <Button href="https://maps.app.goo.gl/Z6ivpNXnn94nXLeP7" noStyle={true} hover="hover:text-light-blue" className="underline">Liberec, Liberecký kraj, Česká Republika</Button>
-                </Li>
-              </Ul>
-            </div>
-          </div>
-          <div>
-            <div>
-              <Button href="/" noStyle={true} ariaLabel="3kprods - logo"><Image className="img-responsive" src="/images/assets/logo.webp" alt="3kprods - logo" loading="lazy" width={100} height={100}/></Button>
-              <H3>Rychle a efektivně na eventy a marketing!</H3>
-            </div>
-            <div>
-              <P>Nenechte si nic ujít! Přihlaste se k našemu <span>newsletteru</span> a buďte vždy o krok napřed.</P>
-              <NewsletterForm icon={<i className="fa-solid fa-envelope"></i>} placeholder="example@domain.com">Odeslat</NewsletterForm>
-            </div>
-          </div>
-        </section>
-        <FooterCredits year={2025} companyName="3K Productions" socialLinks={[{social: <i className="fa-brands fa-instagram"></i>, url: "https://www.instagram.com/3kprods/", ariaLabel: "Instagram"}, {social: <i className="fa-brands fa-tiktok"></i>, url: "https://www.tiktok.com/@3kprods", ariaLabel: "TikTok"}, {social: <i className="fa-brands fa-linkedin-in"></i>, url: "https://www.linkedin.com/company/3kprods/", ariaLabel: "LinkedIn"}]}/>
-      </footer>
+      <Footer/>
     </body>
     </html>
   );
