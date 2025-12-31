@@ -51,47 +51,49 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        <section className="mx-auto w-xcontent mt-25" id="services">
+        <section className="bg-[url('/images/vectors/services-bg-mobile-image.svg')] bg-cover bg-center bg-no-repeat py-25" id="services">
+        <div className="mx-auto w-xcontent flex flex-col gap-20">
           <div>
             <header>
               <H2 weight="font-medium">Co vše zařídíme?</H2>
-              <H3 size="text-title" weight="font-extrabold" case="lowercase" className="laptop:text-heading"><span className="uppercase mt-4">V</span>šechno pro vaši <strong className="font-extrabold text-light-blue">akci</strong> - od světel až po poslední <strong className="font-extrabold text-light-blue">sousto</strong>!</H3>
+              <H3 size="text-title" weight="font-extrabold" case="lowercase" className="laptop:text-heading mt-4"><span className="uppercase">V</span>šechno pro vaši <strong className="font-extrabold text-light-blue">akci</strong> - od světel až po poslední <strong className="font-extrabold text-light-blue">sousto</strong>!</H3>
             </header>
             <div className="mt-4">
               <P className="text-dark/60">Pro vaše akce dokážeme zpracovat grafiku, připravit dekorace nebo vytisknout všechny potřebné tiskoviny.</P>
-              <Ul className="mt-15">
-                <Li><i className="fa-regular fa-user"></i>Děláme maturáky jinak - bez kompromisů, bez nudy.</Li>
-                <Li><i className="fa-solid fa-handshake-angle"></i>Každou práci dotáhneme do konce.</Li>
+              <Ul className="mt-15 flex flex-col gap-6 border-b pb-15 mb-15">
+                <Li className="flex gap-6 items-center"><i className="fa-regular fa-user text-[2rem] bg-light-blue text-white px-4 py-3.5 rounded-full"></i>Děláme maturáky jinak - bez kompromisů, bez nudy.</Li>
+                <Li className="flex gap-6 items-center"><i className="fa-solid fa-handshake-angle text-[1.75rem] bg-light-blue text-white px-[12.5px] py-4 rounded-full"></i>Každou práci dotáhneme do konce.</Li>
               </Ul>
             </div>
             <div>
-              <Ul>
-                <Li><InfoCard icon={<i className="fa-solid fa-compact-disc"></i>} title="DJ">DJ? Máme ho v kapse</InfoCard></Li>
-                <Li><InfoCard icon={<i className="fa-solid fa-bolt"></i>} title="Osvětlení">Světla, co váš ples rozzáří</InfoCard></Li>
-                <Li><InfoCard icon={<i className="fa-solid fa-camera"></i>} title="Fotograf">Selfie i skupiny - máme je</InfoCard></Li>
+              <Ul className="grid gap-y-8">
+                <Li className="list-none"><InfoCard icon={<i className="fa-solid fa-compact-disc text-sub text-light-blue"></i>} title="DJ">DJ? Máme ho v kapse</InfoCard></Li>
+                <Li className="justify-self-end list-none"><InfoCard icon={<i className="fa-solid fa-bolt text-sub text-light-blue"></i>} title="Osvětlení">Světla, co váš ples rozzáří</InfoCard></Li>
+                <Li className="list-none"><InfoCard icon={<i className="fa-solid fa-camera text-sub text-light-blue"></i>} title="Fotograf">Selfie i skupiny - máme je</InfoCard></Li>
               </Ul>
-              <Button href="tel:+420722145257" variant="secondary">Chci maturák!</Button>
+              <Button className="mt-10" href="tel:+420722145257" variant="secondary">Chci maturák!</Button>
             </div>
           </div>
-          <div>
-            <article>
+          <div className="flex flex-col gap-15">
+            <article className="bg-green rounded-[40px] px-10 py-15">
               <header>
-                <Image className="svg-responsive" src="/images/vectors/triangle.svg" alt="3kprods - odkaz na video" loading="lazy" width={16} height={16} />
+                <a className="w-15 h-15 p-6 bg-light-blue rounded-full flex items-center justify-center hover:shadow-xl active:shadow-xl transition-shadow duration-250" href="https://www.youtube.com/@3KProds/videos" target="_blank" rel="noopener noreferrer" aria-label="Šipka"><Image className="svg-responsive" src="/images/vectors/triangle.svg" alt="3kprods - odkaz na video" loading="lazy" width={16} height={16} /></a>
               </header>
-              <div>
-                <P>Na co jsme machři a co dávno zvládáme levou <b>zadní</b>!</P>
+              <div className="mt-4">
+                <P size="text-sub" weight="font-bold">Na co jsme machři a co dávno zvládáme levou <b className="font-bold text-light-blue">zadní</b>!</P>
               </div>
-              <footer>
+              <footer className="mt-8">
                 <Button href="https://www.3kprods.cz/" isArrow={false}>Naše projekty</Button>
               </footer>
             </article>
-            <figure className="slaptop:hidden">
+            <figure className="slaptop:hidden w-[312px] h-[375px] mx-auto">
               <Image className="img-responsive" src="/images/content/moderator-mobile-image.webp" alt="3kprods - fotka moderátora" loading="lazy" width={312} height={375} />
             </figure>
             <figure className="hidden slaptop:block">
               <Image className="img-responsive" src="/images/content/moderator-image.webp" alt="3kprods - fotka moderátora" loading="lazy" width={600} height={720} />
             </figure>
           </div>
+        </div>
         </section>
         <div id="stats">
           <Ul>
