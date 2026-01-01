@@ -1,4 +1,4 @@
-import { H1, H2, H3, H4, P, Ul, Li, Button, Badge, InfoCard } from "@/components";
+import { H1, H2, H3, H4, P, Ul, Li, Button, Badge, InfoCard, ExpertiseCard } from "@/components";
 import Image from "next/image";
 
 const HomePage = () => {
@@ -51,54 +51,44 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        <section className="bg-[url('/images/vectors/services-bg-mobile-image.svg')] bg-cover bg-center bg-no-repeat py-25" id="services">
-        <div className="mx-auto w-xcontent flex flex-col gap-20">
-          <div>
-            <header>
-              <H2 weight="font-medium">Co vše zařídíme?</H2>
-              <H3 size="text-title" weight="font-extrabold" case="lowercase" className="laptop:text-heading mt-4"><span className="uppercase">V</span>šechno pro vaši <strong className="font-extrabold text-light-blue">akci</strong> - od světel až po poslední <strong className="font-extrabold text-light-blue">sousto</strong>!</H3>
-            </header>
-            <div className="mt-4">
-              <P className="text-dark/60">Pro vaše akce dokážeme zpracovat grafiku, připravit dekorace nebo vytisknout všechny potřebné tiskoviny.</P>
-              <Ul className="mt-15 flex flex-col gap-6 border-b pb-15 mb-15">
-                <Li className="flex gap-6 items-center"><i className="fa-regular fa-user text-[2rem] bg-light-blue text-white px-4 py-3.5 rounded-full"></i>Děláme maturáky jinak - bez kompromisů, bez nudy.</Li>
-                <Li className="flex gap-6 items-center"><i className="fa-solid fa-handshake-angle text-[1.75rem] bg-light-blue text-white px-[12.5px] py-4 rounded-full"></i>Každou práci dotáhneme do konce.</Li>
-              </Ul>
-            </div>
-            <div>
-              <Ul className="grid gap-y-8">
-                <Li className="list-none"><InfoCard icon={<i className="fa-solid fa-compact-disc text-sub text-light-blue"></i>} title="DJ">DJ? Máme ho v kapse</InfoCard></Li>
-                <Li className="justify-self-end list-none"><InfoCard icon={<i className="fa-solid fa-bolt text-sub text-light-blue"></i>} title="Osvětlení">Světla, co váš ples rozzáří</InfoCard></Li>
-                <Li className="list-none"><InfoCard icon={<i className="fa-solid fa-camera text-sub text-light-blue"></i>} title="Fotograf">Selfie i skupiny - máme je</InfoCard></Li>
-              </Ul>
-              <Button className="mt-10" href="tel:+420722145257" variant="secondary">Chci maturák!</Button>
-            </div>
-          </div>
-          <div className="flex flex-col gap-15">
-            <article className="bg-green rounded-[40px] px-10 py-15">
-              <header>
-                <a className="w-15 h-15 p-6 bg-light-blue rounded-full flex items-center justify-center hover:shadow-xl active:shadow-xl transition-shadow duration-250" href="https://www.youtube.com/@3KProds/videos" target="_blank" rel="noopener noreferrer" aria-label="Šipka"><Image className="svg-responsive" src="/images/vectors/triangle.svg" alt="3kprods - odkaz na video" loading="lazy" width={16} height={16} /></a>
+        <section className="blur-setup blur-setup--blue blur-setup-services-left blur-setup-services-right bg-[url('/images/vectors/services-bg-mobile-image.svg')] bg-cover bg-center bg-no-repeat py-25" id="services">
+          <div className="mx-auto w-xcontent flex flex-col gap-20 slaptop:flex-row slaptop:items-center laptop:justify-between xdesktop:w-content xldesktop:justify-center xldesktop:gap-24 relative desktop:before:content-[''] desktop:before:-bottom-25 desktop:before:-left-30 desktop:before:z-10 desktop:before:w-50 desktop:before:h-51 desktop:before:absolute desktop:before:bg-[url('/images/vectors/shape.svg')] desktop:before:bg-no-repeat desktop:before:bg-contain desktop:before:pointer-events-none desktop:after:content-[''] desktop:after:w-50 desktop:after:h-51 desktop:after:z-10 desktop:after:absolute desktop:after:bg-[url('/images/vectors/shape.svg')] desktop:after:bg-no-repeat desktop:after:bg-contain desktop:after:pointer-events-none desktop:after:-top-18 desktop:after:-right-38 desktop:after:-rotate-90">
+            <div className="slaptop:order-1 slaptop:basis-3/5 laptop:basis-1/2">
+              <header className="relative z-1">
+                <H2 weight="font-medium">Co vše zařídíme?</H2>
+                <H3 size="text-title" weight="font-extrabold" case="lowercase" className="laptop:text-heading mt-4 z-10"><span className="uppercase">V</span>šechno pro vaši <strong className="font-extrabold text-light-blue">akci</strong> - od světel až po poslední <strong className="font-extrabold text-light-blue">sousto</strong>!</H3>
               </header>
               <div className="mt-4">
-                <P size="text-sub" weight="font-bold">Na co jsme machři a co dávno zvládáme levou <b className="font-bold text-light-blue">zadní</b>!</P>
+                <P className="text-dark/60">Pro vaše akce dokážeme zpracovat grafiku, připravit dekorace nebo vytisknout všechny potřebné tiskoviny.</P>
+                <Ul className="mt-15 slaptop:mt-10 flex flex-col gap-6 slaptop:gap-4 border-b pb-15 slaptop:pb-10 mb-15 slaptop:mb-10 laptop:flex-row laptop:gap-6">
+                  <Li className="flex gap-6 items-center laptop:basis-1/2 laptop:grow"><i className="fa-regular fa-user text-[2rem] bg-light-blue text-white px-4 py-3.5 rounded-full"></i>Děláme maturáky jinak - bez kompromisů, bez nudy.</Li>
+                  <Li className="flex gap-6 items-center laptop:basis-1/2 laptop:grow"><i className="fa-solid fa-handshake-angle text-[1.75rem] bg-light-blue text-white px-[12.5px] py-4 rounded-full"></i>Každou práci dotáhneme do konce.</Li>
+                </Ul>
               </div>
-              <footer className="mt-8">
-                <Button href="https://www.3kprods.cz/" isArrow={false}>Naše projekty</Button>
-              </footer>
-            </article>
-            <figure className="slaptop:hidden w-[312px] h-[375px] mx-auto">
-              <Image className="img-responsive" src="/images/content/moderator-mobile-image.webp" alt="3kprods - fotka moderátora" loading="lazy" width={312} height={375} />
-            </figure>
-            <figure className="hidden slaptop:block">
-              <Image className="img-responsive" src="/images/content/moderator-image.webp" alt="3kprods - fotka moderátora" loading="lazy" width={600} height={720} />
-            </figure>
+              <div>
+                <Ul className="grid gap-y-8 slaptop:flex slaptop:flex-wrap slaptop:gap-4 desktop:gap-8 slaptop:max-w-none stablet:max-w-[440px] mx-auto">
+                  <Li className="grow desktop:basis-[30%] list-none"><InfoCard icon={<i className="fa-solid fa-compact-disc text-sub text-light-blue"></i>} title="DJ">DJ? Máme ho v kapse</InfoCard></Li>
+                  <Li className="grow desktop:basis-[30%] justify-self-end list-none"><InfoCard icon={<i className="fa-solid fa-bolt text-sub text-light-blue"></i>} title="Osvětlení">Světla, co váš ples rozzáří</InfoCard></Li>
+                  <Li className="grow desktop:basis-[30%] list-none"><InfoCard icon={<i className="fa-solid fa-camera text-sub text-light-blue"></i>} title="Fotograf">Selfie i skupiny - máme je</InfoCard></Li>
+                </Ul>
+                <Button className="mt-10" href="tel:+420722145257" variant="secondary">Chci maturák!</Button>
+              </div>
+            </div>
+            <div className="flex flex-col gap-15 stablet:relative stablet:block slaptop:flex slaptop:flex-col slaptop:gap-0 relative z-1 before:content-[''] before:-top-12 before:left-50 xphone:before:left-100 stablet:before:left-120 slaptop:before:hidden before:z-10 before:-rotate-90 before:w-25 before:h-26 before:absolute before:bg-[url('/images/vectors/shape.svg')] before:bg-no-repeat before:bg-contain before:pointer-events-none">
+              <ExpertiseCard className="stablet:absolute slaptop:static slaptop:-mt-10 slaptop:-ml-10 laptop:ml-10 stablet:max-w-[340px] -left-6 top-24 desktop:absolute desktop:top-40 desktop:-left-30 xdesktop:top-32 xdesktop:-left-40 xxldesktop:top-20 xxldesktop:-left-60" content={<>Na co jsme machři a co dávno zvládáme levou <b className="font-bold text-light-blue">zadní</b>!</>} arrowHref="https://www.youtube.com/@3KProds/videos" buttonContent="Naše projekty" buttonHref="https://www.3kprods.cz/"/>
+              <figure className="slaptop:hidden w-[312px] h-[375px] mx-auto stablet:w-[540px] tablet:w-[600px] stablet:h-auto stablet:mr-0">
+                <Image className="img-responsive" src="/images/content/moderator-mobile-image.webp" alt="3kprods - fotka moderátora" loading="lazy" width={312} height={375} />
+              </figure>
+              <figure className="hidden slaptop:block slaptop:-order-1 laptop:w-[500px] desktop:w-[600px] laptop:h-auto">
+                <Image className="img-responsive" src="/images/content/moderator-image.webp" alt="3kprods - fotka moderátora" loading="lazy" width={600} height={720} />
+              </figure>
+            </div>
           </div>
-        </div>
         </section>
-        <div id="stats">
-          <Ul>
+        <div className="mx-auto w-xcontent" id="stats">
+          <Ul className="my-25 px-15 py-20 bg-light-blue/60 rounded-[60px] slaptop:rounded-[80px]">
             <Li>
-              <P>100+</P>
+              <P family="font-bungee" weight="font-medium" color="text-white" size="text-heading" className="relative after:absolute after:content-[''] after:bottom-0 after:left-0 after:w-[140px] after:h-0.5 after:bg-white">100+</P>
               <div>
                 <i className="fa-solid fa-trophy"></i>
                 <H4>Uspořádaných maturáků</H4>

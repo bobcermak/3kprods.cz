@@ -36,6 +36,8 @@
   --breakpoint-laptop: 1281px;
   --breakpoint-desktop: 1537px;
   --breakpoint-xdesktop: 1761px;
+  --breakpoint-xldesktop: 1841px;
+  --breakpoint-xxldesktop: 2101px;
   /*Widths*/
   --width-container: 90vw;
   --width-container: 90svw;
@@ -170,6 +172,8 @@ body {
   background-image: url(/images/vectors/blur-blue.svg);
 }
 
+/*Hero blurs*/
+
 .blur-setup-hero-left::before {
   left: -110%;
   top: -20%;
@@ -221,5 +225,72 @@ body {
     top: 15%;
     width: 1500px;
     height: 1500px;
+  }
+}
+
+/*Services blurs*/
+
+.blur-setup-services-left::before {
+  right: -125%;
+  top: -20%;
+}
+
+.blur-setup-services-right::after {
+  left: -90%;
+  top: 60%;
+}
+
+@media screen and (min-width: 541px) {
+  .blur-setup-services-left::before {
+    right: -80%;
+  }
+
+  .blur-setup-services-right::after {
+    left: -60%;
+    top: 60%;
+  }
+}
+
+@media screen and (min-width: 861px) {
+  .blur-setup-services-left::before {
+    right: -50%;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .blur-setup-services-left::before {
+    left: -50%;
+    top: -40%;
+  }
+
+  .blur-setup-services-right::after {
+    left: 50%;
+    top: 60%;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .blur-setup-services-left::before {
+    left: -30%;
+    top: -40%;
+    width: 1200px;
+    height: 1200px;
+  }
+
+  .blur-setup-services-right::after {
+    left: 70%;
+  }
+}
+
+@media screen and (min-width: 1761px) {
+  .blur-setup-hero-left::before {
+    top: -55%;
+    left: -35%;
+    width: 1500px;
+    height: 1500px;
+  }
+
+  .blur-setup-services-right::after {
+    left: 78%;
   }
 }
