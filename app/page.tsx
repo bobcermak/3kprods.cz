@@ -86,29 +86,31 @@ const HomePage = () => {
           </div>
         </section>
         <div className="mx-auto w-xcontent" id="stats">
-          <Ul className="my-25 px-15 py-20 bg-light-blue/60 rounded-[60px] slaptop:rounded-[80px]">
-            <Li>
-              <P family="font-bungee" weight="font-medium" color="text-white" size="text-heading" className="relative after:absolute after:content-[''] after:bottom-0 after:left-0 after:w-[140px] after:h-0.5 after:bg-white">100+</P>
-              <div>
-                <i className="fa-solid fa-trophy"></i>
-                <H4>Uspořádaných maturáků</H4>
-              </div>
-            </Li>
-            <Li>
-              <P>20<span className="phone:hidden">K</span><span className="hidden phone:inline"> 000</span>+</P>
-              <div>
-                <i className="fa-solid fa-camera"></i>
-                <H4>Fotek a videí</H4>
-              </div>
-            </Li>
-            <Li>
-              <P>10+</P>
-              <div>
-                <i className="fa-solid fa-school"></i>
-                <H4>let zkušeností</H4>
-              </div>
-            </Li>
-          </Ul>
+          <div className="shadow-[0_10px_12px_0_#00022240] rounded-[60px] slaptop:rounded-[80px] relative before:content-[''] before:-bottom-10 before:-right-5 desktop:before:-bottom-20 desktop:before:-right-20 before:z-10 before:w-25 before:h-26 desktop:before:w-50 desktop:before:h-51 before:absolute before:bg-[url('/images/vectors/shape.svg')] before:bg-no-repeat before:bg-contain before:pointer-events-none before:-rotate-90">
+            <Ul className="flex flex-col slaptop:flex-row slaptop:justify-center desktop:gap-0 desktop:justify-between stablet:items-center gap-20 my-25 px-15 py-20 desktop:px-40 bg-light-blue/60 rounded-[60px] slaptop:rounded-[80px] inner-shadow-primary">
+              <Li className="stablet:flex stablet:flex-col stablet:items-center slaptop:inline-block slaptop:w-[227px] laptop:w-fit laptop:max-w-[210px] desktop:max-w-[287px] list-none">
+                <P family="font-bungee" weight="font-medium" color="text-white" size="text-heading" className="relative after:absolute after:content-[''] after:bottom-0 after:left-0 after:w-[140px] after:h-0.5 after:bg-white desktop:text-display">100+</P>
+                <div className="flex gap-4 items-center mt-6">
+                  <i className="fa-solid fa-trophy flex justify-center items-center text-sub bg-light-blue text-white px-[15.95px] py-[17.5px] rounded-full"></i>
+                  <H4 size="text-body" weight="font-bold" className="text-white/80 desktop:text-sub">Uspořádaných maturáků</H4>
+                </div>
+              </Li>
+              <Li className="stablet:flex stablet:flex-col stablet:items-center slaptop:inline-block slaptop:w-[227px] laptop:w-fit laptop:max-w-[287px] desktop:max-w-[412px] list-none">
+                <P family="font-bungee" weight="font-medium" color="text-white" size="text-heading" className="relative after:absolute after:content-[''] after:bottom-0 after:left-0 after:w-[140px] after:h-0.5 after:bg-white desktop:text-display">20<span className="stablet:hidden slaptop:inline laptop:hidden">K</span><span className="hidden stablet:inline slaptop:hidden laptop:inline"> 000</span>+</P>
+                <div className="flex gap-4 items-center mt-6">
+                  <i className="fa-solid fa-camera flex justify-center items-center text-sub bg-light-blue text-white px-[17.5px] py-[17.5px] rounded-full"></i>
+                  <H4 size="text-body" weight="font-bold" className="text-white/80 desktop:text-sub">Fotek a videí</H4>
+                </div>
+              </Li>
+              <Li className="stablet:flex stablet:flex-col stablet:items-center slaptop:inline-block slaptop:w-[227px] laptop:w-fit laptop:max-w-[287px] list-none">
+                <P family="font-bungee" weight="font-medium" color="text-white" size="text-heading" className="relative after:absolute after:content-[''] after:bottom-0 after:left-0 after:w-[140px] after:h-0.5 after:bg-white desktop:text-display">10+</P>
+                <div className="flex gap-4 items-center mt-6">
+                  <i className="fa-solid fa-school flex justify-center items-center text-sub bg-light-blue text-white px-[14.39px] py-[17.5px] rounded-full"></i>
+                  <H4 size="text-body" weight="font-bold" className="text-white/80 desktop:text-sub">let zkušeností</H4>
+                </div>
+              </Li>
+            </Ul>
+          </div>
         </div>
         <section id="reviews">
           <div>
