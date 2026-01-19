@@ -1,6 +1,6 @@
 export type FontFamily = "font-raleway" | "font-bungee" | null;
 export type FontStyle = "italic" | "not-italic" | null;
-export type TextSize = "text-body" | "text-sub" | "text-title" | "text-heading" | "text-display" | `${string}:text-body` | `${string}:text-sub` | `${string}:text-title` | `${string}:text-heading` | `${string}:text-display` | null;
+export type TextSize = "text-sm" | "text-body" | "text-sub" | "text-title" | "text-heading" | "text-display" | `text-${string}` | `${string}:text-sm` | `${string}:text-body` | `${string}:text-sub` | `${string}:text-title` | `${string}:text-heading` | `${string}:text-display` | `${string}:text-${string}` | null;
 export type FontWeight = "font-light" | "font-normal" | "font-medium" | "font-semibold" | "font-bold" | "font-extrabold" | "font-black" | null;
 export type Leading = "leading-tight" | "leading-snug" | "leading-normal" | null;
 export type TextAlign = "text-left" | "text-center" | "text-right" | "text-justify" | null;

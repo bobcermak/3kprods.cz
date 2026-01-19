@@ -74,11 +74,11 @@ export default function RootLayout({
       </Ul>
       <header>
         <Navbar logo="/images/assets/logo.webp" button="Jdeme na to" className="fixed z-50 left-0 right-0 laptop:left-[50%] laptop:translate-x-[-50%] flex items-center justify-between px-3 py-1 rounded-bl-[3rem] rounded-br-[3rem] bg-white/10 backdrop-blur-[100px] shadow-primary laptop:w-container" href="tel:+420722145257">
-          <Li className="laptop:ml-21 mb-0"><Button href="/" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-green uppercase font-bold text-body">Domů</Button></Li>
-          <Li><Button href="#welcome" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-bold text-body">O nás</Button></Li>
-          <Li><Button href="https://www.3kprods.cz/partnership.html" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-bold text-body">Partnerství</Button></Li>
-          <Li><Button href="https://www.3kprods.cz/team.html" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-bold text-body">Náš team</Button></Li>
-          <Li><Button href="#contact-us" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-bold text-body">Kontakty</Button></Li>
+          <Li className="laptop:ml-21 mb-0"><Button href="/" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-green uppercase font-semibold text-body">Domů</Button></Li>
+          <Li><Button href="#welcome" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-semibold text-body">O nás</Button></Li>
+          <Li><Button href="https://www.3kprods.cz/partnership.html" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-semibold text-body">Partnerství</Button></Li>
+          <Li><Button href="https://www.3kprods.cz/team.html" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-semibold text-body">Náš team</Button></Li>
+          <Li><Button href="#contact-us" noStyle={true} hover="hover:bg-light-blue rounded-[12px] px-6 py-3 active:bg-light-blue transition-all duration-250" className="text-white uppercase font-semibold text-body">Kontakty</Button></Li>
           <Li className="laptop:hidden px-6 laptop:px-0"><Button href="#contact-us" variant="secondary" isArrow={false}>Kontaktuj nás</Button></Li>
         </Navbar>
       </header>
