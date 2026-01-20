@@ -5,5 +5,5 @@ export type FontWeight = "font-light" | "font-normal" | "font-medium" | "font-se
 export type Leading = "leading-tight" | "leading-snug" | "leading-normal" | null;
 export type TextAlign = "text-left" | "text-center" | "text-right" | "text-justify" | null;
 export type TextColor = "bg-blue" | "text-blue" | "bg-light-blue" | "text-light-blue" | "bg-green" | "text-green" | "bg-dark-white" | "text-dark-white" | "bg-white" | "text-white" | "bg-dark" | "text-dark" | "bg-gold" | "text-gold" | null;
-export type TextCase = "uppercase" | "lowercase" | null;
+export type TextCase = "uppercase" | "lowercase" | "capitalize" | null;
 export type UlType = "list-disc" | "list-decimal" | "list-none" | "menu" | null;

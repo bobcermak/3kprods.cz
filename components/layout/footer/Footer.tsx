@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className="mt-25">
             <section id="contact-us">
                 <div>
                     <header>

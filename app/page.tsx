@@ -1,7 +1,9 @@
-import { H1, H2, H3, H4, P, Ul, Li, Button, Badge, InfoCard, ExpertiseCard, ReviewCard } from "@/components";
+import { H1, H2, H3, H4, P, Ul, Li, Button, Badge, InfoCard, ExpertiseCard, ReviewCard, SwiperPrimary } from "@/components";
 import Image from "next/image";
+import { Review } from "@/types/appModels";
 
 const HomePage = () => {
+  const references: Review[] = [ { id: 1, personName: "Dominik Lhoták", personDescription: "Dlouho-letý partner 3K Productions", content: "S 3K Productions spolupracujeme již od roku 2023, jsme velice spokojeni s jejich prací a jsme hrdí na to, že jsme mezi partnery této mladé, spolehlivé firmy." }, { id: 2, personName: "Honza V.", personDescription: "Maturant z Gymnázia Tanvald, 2024", content: "Příprava na maturák s 3K Productions byla perfektní. Jejich tým přinesl nejen skvělé nápady, ale kluci se také ukázali jako velmi dobří komunikátoři. Kdykoliv jsme potřebovali něco udělat rychle, byli jsme si jistí, že se na kluky můžem spolehnout." }, { id: 3, personName: "Adéla K.", personDescription: "Hlavní organizátorka plesu, OA Liberec, 2024", content: "Výsledné aftermovie předčilo naše očekávání. Nechtěli jsme jen nudný záznam, ale video, které bude mít energii, a to se 3K Productions povedlo na jedničku. Skvěle zachytili atmosféru i momenty, kterých jsme si v tom shonu ani nevšimli. Díky za vzpomínku, která nevybledne." } ]
   return (
     <>
       <main>
@@ -87,7 +89,7 @@ const HomePage = () => {
         </section>
         <div className="mx-auto w-xcontent" id="stats">
           <div className="shadow-[0_10px_12px_0_#00022240] rounded-[60px] slaptop:rounded-[80px] relative before:content-[''] before:-bottom-10 before:-right-5 desktop:before:-bottom-20 desktop:before:-right-20 before:z-10 before:w-25 before:h-26 desktop:before:w-50 desktop:before:h-51 before:absolute before:bg-[url('/images/vectors/shape.svg')] before:bg-no-repeat before:bg-contain before:pointer-events-none before:-rotate-90">
-            <Ul className="flex flex-col slaptop:flex-row slaptop:gap-30 slaptop:justify-center desktop:gap-0 desktop:justify-between stablet:items-center gap-20 my-25 px-15 py-20 desktop:px-40 bg-light-blue/60 rounded-[60px] slaptop:rounded-[80px] inner-shadow-primary">
+            <Ul className="flex flex-col slaptop:flex-row slaptop:gap-30 slaptop:justify-center desktop:gap-0 desktop:justify-between stablet:items-center gap-20 my-25 xdesktop:mb-40 px-15 py-20 desktop:px-40 bg-light-blue/60 rounded-[60px] slaptop:rounded-[80px] inner-shadow-primary">
               <Li className="stablet:flex stablet:flex-col stablet:items-center slaptop:inline-block slaptop:w-[227px] laptop:w-fit laptop:max-w-[210px] desktop:max-w-[287px] list-none">
                 <P family="font-bungee" weight="font-medium" color="text-white" size="text-[3rem]" className="relative after:absolute after:content-[''] after:bottom-0 after:left-0 after:w-[140px] after:h-0.5 after:bg-white min-[1401px]:text-heading desktop:text-display">100+</P>
                 <div className="flex gap-4 items-center mt-6">
@@ -112,17 +114,21 @@ const HomePage = () => {
             </Ul>
           </div>
         </div>
-        <section className="mx-auto w-container laptop:flex laptop:items-center laptop:gap-25" id="reviews">
-          <div className="basis-1/2">
+        <section className="relative mx-auto w-container min-[1401px]:flex min-[1401px]:items-center min-[1401px]:gap-25" id="reviews">
+          <div className="min-[1401px]:basis-1/2">
             <header className="max-w-[780px]">
               <H2 weight="font-medium">Co se o nás povída?</H2>
               <H3 size="text-title" weight="font-extrabold" case="lowercase" className="laptop:text-heading mt-4 z-10"><strong className="font-extrabold text-light-blue"><span className="uppercase">M</span>aturanti</strong> o nás mluví jasně — s námi byl jejich <strong className="font-extrabold text-light-blue">večer výjimečný</strong>!</H3>
             </header>
-            <div className="mt-15">
-              <ReviewCard>S 3K Productions spolupracujeme již od roku 2023, jsme velice spokojeni s jejich prací a jsme hrdí na to, že jsme mezi partnery této mladé, spolehlivé firmy.</ReviewCard>
+            <div className="mt-15 mb-48">
+              <SwiperPrimary>
+                {references.map((reference) => (
+                  <ReviewCard key={reference.id} personName={reference.personName} personDescription={reference.personDescription}>{reference.content}</ReviewCard>
+                ))}
+              </SwiperPrimary>
             </div>
           </div>
-          <figure className="relative basis-1/2">
+          <figure className="relative mx-auto h-[375px] xphone:h-[480px] min-[1401px]:basis-1/2 min-[1401px]:h-auto">
             <Badge className="absolute top-0 -mt-[1.65625rem] left-6 right-6 desktop:left-12 desktop:right-9">Pojď do toho s námi !</Badge>
             <Image className="img-responsive rounded-[20px]" src="/images/content/couple-image.webp" alt="3kprods - fotka z maturitního plesu" loading="lazy" width={668} height={720} />
           </figure>
