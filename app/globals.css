@@ -24,7 +24,7 @@
   /*Shadows*/
   --shadow-primary: 0px 4px 12px 0px rgba(0, 2, 34, 0.25);
   --shadow-secondary: 0px 4px 12px 0px rgba(0, 2, 34, 0.5);
-  --inner-shadow-primary: inset 0px 4px 12px 0px rgba(0, 2, 34, 0.25);
+  --inner-shadow-primary: inset 0px 0px 12px 0px rgba(0, 2, 34, 0.5);
   /*Breakpoints*/
   --breakpoint-sphone: 361px;
   --breakpoint-phone: 401px;
@@ -93,7 +93,7 @@ body {
 /*Inner shadow*/
 
 .inner-shadow-primary {
-  box-shadow: var(--inner-shadow-primary, inset 0px 4px 12px 0px rgba(0, 2, 34, 0.25));
+  box-shadow: var(--inner-shadow-primary, inset 0px 0px 12px 0px rgba(0, 2, 34, 0.5));
 }
 
 @media screen and (min-width: 1281px) {

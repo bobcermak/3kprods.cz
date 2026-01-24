@@ -3,39 +3,45 @@ import Image from "next/image";
 
 const Footer = () => {
     return (
-        <footer className="mt-25">
-            <section id="contact-us">
+        <footer className="mt-25 bg-blue pt-15">
+            <section className="mx-auto w-xcontent" id="contact-us">
                 <div>
-                    <header>
-                        <H2>Jednoduše nám <span>napište</span> nebo <span>zavolejte</span>.</H2>
+                    <header className="max-w-[940px]">
+                        <H2 color="text-white" size="text-title" weight="font-extrabold" case="lowercase" className="laptop:text-heading"><span className="uppercase">J</span>ednoduše nám <span className="font-extrabold text-green">napište</span> nebo <span className="font-extrabold text-green">zavolejte</span>.</H2>
                     </header>
-                    <div>
-                        <Ul>
-                            <Li>
-                                <i className="fa-solid fa-phone"></i>
-                                <div>
-                                    <Button href="tel:+420722145257" noStyle={true} hover="hover:text-light-blue" className="underline">+420 722 145 257</Button>
-                                    <Button href="tel:+420739145788" noStyle={true} hover="hover:text-light-blue" className="underline">+420 739 145 788</Button>
+                    <div className="mt-10">
+                        <Ul className="flex flex-col gap-6 bg-dark-white rounded-[20px] inner-shadow-primary px-5 py-10">
+                            <Li className="m-0 pb-6 border-b border-dashed list-none">
+                                <div className="flex gap-6 p-5 bg-white rounded-[20px] shadow-primary">
+                                    <i className="fa-solid fa-phone text-[2rem] bg-green rounded-full p-3.5"></i>
+                                    <div className="flex flex-col gap-2">
+                                        <Button href="tel:+420722145257" noStyle={true} hover="hover:text-light-blue active:text-light-blue" className="underline"><strong className="font-bold">+420 722 145 257</strong></Button>
+                                        <Button href="tel:+420739145788" noStyle={true} hover="hover:text-light-blue active:text-light-blue" className="underline"><strong className="font-bold">+420 739 145 788</strong></Button>
+                                    </div>
                                 </div>
                             </Li>
-                            <Li>
-                                <i className="fa-solid fa-envelope"></i>
-                                <Button href="mailto:info@3kprods.cz" noStyle={true} hover="hover:text-light-blue" className="underline">info@3kprods.cz</Button>
+                            <Li className="m-0 pb-6 border-b border-dashed list-none">
+                                <div className="flex items-center gap-6 p-5 bg-white rounded-[20px] shadow-primary">
+                                    <i className="fa-solid fa-envelope text-[2rem] bg-green rounded-full p-3.5"></i>
+                                    <Button href="mailto:info@3kprods.cz" noStyle={true} hover="hover:text-light-blue active:text-light-blue" className="underline"><strong className="font-bold">info@3kprods.cz</strong></Button>
+                                </div>
                             </Li>
-                            <Li>
-                                <i className="fa-solid fa-location-dot"></i>
-                                <Button href="https://maps.app.goo.gl/Z6ivpNXnn94nXLeP7" noStyle={true} hover="hover:text-light-blue" className="underline">Liberec, Liberecký kraj, Česká Republika</Button>
+                            <Li className="m-0 pb-6 border-b border-dashed list-none">
+                                <div className="flex items-center gap-6 p-5 bg-white rounded-[20px] shadow-primary">
+                                    <i className="fa-solid fa-location-dot text-[2rem] bg-green rounded-full px-4.5 py-3.5"></i>
+                                    <Button href="https://maps.app.goo.gl/Z6ivpNXnn94nXLeP7" noStyle={true} hover="hover:text-light-blue active:text-light-blue" className="underline"><strong className="font-bold">Liberec, Liberecký kraj, Česká Republika</strong></Button>
+                                </div>
                             </Li>
                         </Ul>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <Button href="/" noStyle={true} ariaLabel="3kprods - logo"><Image className="img-responsive" src="/images/assets/logo.webp" alt="3kprods - logo" loading="lazy" width={100} height={100}/></Button>
-                        <H3>Rychle a efektivně na eventy a marketing!</H3>
+                <div className="mt-10">
+                    <div className="flex justify-center items-center gap-5">
+                        <Button href="/" noStyle={true} ariaLabel="3kprods - logo" className="min-w-[100px]"><Image className="img-responsive" src="/images/assets/logo.webp" alt="3kprods - logo" loading="lazy" width={100} height={100}/></Button>
+                        <H3 size="text-body" weight="font-semibold" case="lowercase" className="text-white/60"><span className="uppercase">R</span>ychle a efektivně na eventy a marketing!</H3>
                     </div>
-                    <div>
-                        <P>Nenechte si nic ujít! Přihlaste se k našemu <span>newsletteru</span> a buďte vždy o krok napřed.</P>
+                    <div className="mt-10">
+                        <P color="text-white" size="text-sub" weight="font-bold">Nenechte si nic ujít! Přihlaste se k našemu <span className="text-green">newsletteru</span> a buďte vždy o krok napřed.</P>
                         <NewsletterForm icon={<i className="fa-solid fa-envelope"></i>} placeholder="example@domain.com">Odeslat</NewsletterForm>
                     </div>
                 </div>

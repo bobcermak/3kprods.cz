@@ -37,9 +37,9 @@ const HomePage = () => {
                   <div>
                     <P color="text-green" className="mb-4 uppercase"><strong className="font-bold">Proč si vybrat nás:</strong></P>
                     <Ul className="flex flex-col gap-4">
-                      <Li  className="flex gap-4 items-center uppercase list-none"><i className="fa-solid fa-check bg-light-blue px-[9px] py-2 rounded-full h-min"></i><P size="text-sm" color="text-white" weight="font-bold" className="flex gap-1 items-center"><span>🎶</span> DJ a moderátor v ceně</P></Li>
-                      <Li  className="flex gap-4 items-center uppercase list-none"><i className="fa-solid fa-check bg-light-blue px-[9px] py-2 rounded-full h-fit"></i><P size="text-sm" color="text-white" weight="font-bold" className="flex gap-1 items-center"><span>💡</span> Kompletní technika a světla</P></Li>
-                      <Li  className="flex gap-4 items-center uppercase list-none"><i className="fa-solid fa-check bg-light-blue px-[9px] py-2 rounded-full h-fit"></i><P size="text-sm" color="text-white" weight="font-bold" className="flex gap-1 items-center"><span>📸</span> Fotokoutek a profi fotograf</P></Li>
+                      <Li  className="flex gap-4 items-center uppercase list-none"><i className="fa-solid fa-check bg-light-blue px-[9px] py-2 rounded-full h-min text-white"></i><P size="text-sm" color="text-white" weight="font-bold" className="flex gap-1 items-center"><span>🎶</span> DJ a moderátor v ceně</P></Li>
+                      <Li  className="flex gap-4 items-center uppercase list-none"><i className="fa-solid fa-check bg-light-blue px-[9px] py-2 rounded-full h-fit text-white"></i><P size="text-sm" color="text-white" weight="font-bold" className="flex gap-1 items-center"><span>💡</span> Kompletní technika a světla</P></Li>
+                      <Li  className="flex gap-4 items-center uppercase list-none"><i className="fa-solid fa-check bg-light-blue px-[9px] py-2 rounded-full h-fit text-white"></i><P size="text-sm" color="text-white" weight="font-bold" className="flex gap-1 items-center"><span>📸</span> Fotokoutek a profi fotograf</P></Li>
                     </Ul>
                   </div>
                 </div>

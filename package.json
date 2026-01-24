@@ -10,26 +10,26 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
-    "autoprefixer": "^10.4.22",
+    "autoprefixer": "^10.4.23",
     "class-variance-authority": "^0.7.1",
     "embla-carousel-react": "^8.6.0",
-    "gsap": "^3.13.0",
-    "next": "^16.0.7",
-    "nodemailer": "^7.0.11",
+    "gsap": "^3.14.2",
+    "next": "^16.1.4",
+    "nodemailer": "^7.0.12",
     "postcss": "^8.5.6",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "baseline-browser-mapping": "^2.9.5",
+    "baseline-browser-mapping": "^2.9.17",
     "eslint": "^9",
-    "eslint-config-next": "16.0.3",
-    "tailwindcss": "^4.1.17",
+    "eslint-config-next": "16.1.4",
+    "tailwindcss": "^4.1.18",
     "typescript": "^5"
   }
 }
