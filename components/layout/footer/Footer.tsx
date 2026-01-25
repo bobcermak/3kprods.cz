@@ -1,12 +1,16 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { H2, H3, P, Ul, Li, Button, NewsletterForm, FooterCredits } from "@/components";
 import Image from "next/image";
 
 const Footer = () => {
+    const pathname = usePathname();
     return (
-        <footer className="mt-25 bg-blue pt-15">
-            <section className="mx-auto w-xcontent" id="contact-us">
-                <div>
-                    <header className="max-w-[940px]">
+        <footer className={`${pathname === "/" ? "mt-25" : ""} bg-blue pt-15 blur-setup blur-setup--green blur-setup-hero-left blur-setup-footer-right`}>
+            <section className="relative mx-auto w-xcontent laptop:flex laptop:gap-25 z-10" id="contact-us">
+                <div className="basis-[80%]">
+                    <header className="max-w-[680px] laptop:max-w-[940px]">
                         <H2 color="text-white" size="text-title" weight="font-extrabold" case="lowercase" className="laptop:text-heading"><span className="uppercase">J</span>ednoduše nám <span className="font-extrabold text-green">napište</span> nebo <span className="font-extrabold text-green">zavolejte</span>.</H2>
                     </header>
                     <div className="mt-10">
@@ -35,18 +39,18 @@ const Footer = () => {
                         </Ul>
                     </div>
                 </div>
-                <div className="mt-10">
-                    <div className="flex justify-center items-center gap-5">
+                <div className="mt-10 laptop:sticky laptop:top-[50%] laptop:mt-0 laptop:self-start h-fit min-[1701px]:static min-[1701px]:self-center">
+                    <div className="flex justify-center items-center gap-5 laptop:justify-start">
                         <Button href="/" noStyle={true} ariaLabel="3kprods - logo" className="min-w-[100px]"><Image className="img-responsive" src="/images/assets/logo.webp" alt="3kprods - logo" loading="lazy" width={100} height={100}/></Button>
                         <H3 size="text-body" weight="font-semibold" case="lowercase" className="text-white/60"><span className="uppercase">R</span>ychle a efektivně na eventy a marketing!</H3>
                     </div>
                     <div className="mt-10">
-                        <P color="text-white" size="text-sub" weight="font-bold">Nenechte si nic ujít! Přihlaste se k našemu <span className="text-green">newsletteru</span> a buďte vždy o krok napřed.</P>
-                        <NewsletterForm icon={<i className="fa-solid fa-envelope"></i>} placeholder="example@domain.com">Odeslat</NewsletterForm>
+                        <P color="text-white" size="text-sub" weight="font-bold" className="stablet:text-center laptop:text-left">Nenechte si nic ujít! Přihlaste se k našemu <span className="text-green">newsletteru</span> a buďte vždy o krok napřed.</P>
+                        <NewsletterForm icon={<i className="fa-solid fa-envelope text-dark/60"></i>} placeholder="example@domain.com" className="mt-6"/>
                     </div>
                 </div>
             </section>
-            <FooterCredits year={2025} companyName="3K Productions" socialLinks={[{social: <i className="fa-brands fa-instagram"></i>, url: "https://www.instagram.com/3kprods/", ariaLabel: "Instagram"}, {social: <i className="fa-brands fa-tiktok"></i>, url: "https://www.tiktok.com/@3kprods", ariaLabel: "TikTok"}, {social: <i className="fa-brands fa-linkedin-in"></i>, url: "https://www.linkedin.com/company/3kprods/", ariaLabel: "LinkedIn"}]}/>
+            <FooterCredits year={2025} companyName="3K Productions" className="relative z-10 mx-auto w-xcontent my-15 pt-15 laptop:my-25 laptop:pt-25 border-t border-white/60 flex flex-col gap-8 slaptop:flex-row slaptop:items-center slaptop:justify-between" socialLinks={[{social: <i className="fa-brands fa-instagram text-white text-[20px] border rounded-full px-[8.25px] py-[7px] hover:text-green hover:border-green active:text-green active:border-green transition-all duration-250"></i>, url: "https://www.instagram.com/3kprods/", ariaLabel: "Instagram"}, {social: <i className="fa-brands fa-tiktok text-white text-[20px] border rounded-full px-[8.25px] py-[7px] hover:text-green hover:border-green active:text-green active:border-green transition-all duration-250"></i>, url: "https://www.tiktok.com/@3kprods", ariaLabel: "TikTok"}, {social: <i className="fa-brands fa-linkedin-in text-white text-[20px] border rounded-full px-[8.25px] py-[7px] hover:text-green hover:border-green active:text-green active:border-green transition-all duration-250"></i>, url: "https://www.linkedin.com/company/3kprods/", ariaLabel: "LinkedIn"}]}/>
       </footer>
     )
 }

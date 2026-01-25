@@ -17,9 +17,9 @@ type FooterCreditsProps = {
 const FooterCredits: FC<FooterCreditsProps> = ({ year, companyName, socialLinks, className, linksClassName, linksAClassName }) => {
   return (
     <section className={className}>
-        <P>&copy; {year} {companyName} - Všechna práva vyhrazena</P>
+        <P weight="font-medium" className="order-1 text-white/60 slaptop:order-0">&copy; {year} {companyName} - Všechna práva vyhrazena</P>
         <PoweredBy firstName="Bob" lastName="Cermak" link="https://www.linkedin.com/in/bohuslav-%C4%8Derm%C3%A1k-0020ba376/"/>
-        <Ul>
+        <Ul className="flex gap-4 slaptop:gap-4">
         {socialLinks?.map((item) => (
           <Li key={item.url} className={linksClassName}>
             <Button href={item.url} noStyle={true} className={linksAClassName} ariaLabel={item.ariaLabel}>{item.social}</Button>

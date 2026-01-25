@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -7,6 +8,8 @@
   /*Font Families*/
   --font-raleway: 'Raleway', sans-serif;
   --font-bungee: 'Bungee', cursive;
+  --font-orbitron: 'Orbitron', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
   /*Font Sizes*/
   --text-body: 1rem; /*16px*/
   --text-sub: 1.5625rem; /*25px*/
@@ -292,5 +295,42 @@ body {
 
   .blur-setup-services-right::after {
     left: 78%;
+  }
+}
+
+/*Footer blurs*/
+
+.blur-setup-footer-right::after {
+  right: -125%;
+  bottom: -25%;
+}
+
+@media screen and (min-width: 541px) {
+  .blur-setup-footer-right::after {
+    right: -80%;
+  }
+}
+
+@media screen and (min-width: 841px) {
+  .blur-setup-footer-right::after {
+    right: -50%;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .blur-setup-footer-right::after {
+    right: -35%;
+    bottom: -40%;
+    width: 1200px;
+    height: 1200px;
+  }
+}
+
+@media screen and (min-width: 1761px) {
+  .blur-setup-footer-right::after {
+    right: -35%;
+    bottom: -60%;
+    width: 1500px;
+    height: 1500px;
   }
 }

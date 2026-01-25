@@ -22,7 +22,7 @@ const Button: FC<ButtonProps> = ({ isLink = true, href = "#", variant = "primary
     primary: `bg-light-blue/50 text-white hover:bg-light-blue/70 active:bg-light-blue/70`,
     secondary: `bg-green/50 text-blue hover:bg-green/80 active:bg-green/80`
   };
-  const combinedClasses: string = !noStyle ? `${baseStyles} ${variantStyles[variant]} ${className}` : `${className} ${hover} cursor-pointer duration-250 ease-in-out`;
+  const combinedClasses: string = !noStyle ? `${className} ${baseStyles} ${variantStyles[variant]}` : `${className} ${hover} cursor-pointer duration-250 ease-in-out`;
   const external: boolean = href ? href.startsWith("http") : false;
   const arrow = isArrow && !noStyle ? (
     <i className={`fa-solid fa-arrow-right ml-2.5 rounded-full transition-transform duration-250 ease-in-out group-hover:translate-x-0.5 group-active:translate-x-0.5 ${variant === "primary" ? "text-white bg-light-blue" : "text-blue bg-green"} py-1.5 px-1.75`}></i>
