@@ -7,10 +7,10 @@ import Image from "next/image";
 const Footer = () => {
     const pathname = usePathname();
     return (
-        <footer className={`${pathname === "/" ? "mt-25" : ""} bg-blue pt-15 blur-setup blur-setup--green blur-setup-hero-left blur-setup-footer-right`}>
+        <footer className={`${pathname === "/" ? "mt-25" : ""} bg-blue blur-setup blur-setup--green blur-setup-hero-left blur-setup-footer-right`}>
             <section className="relative mx-auto w-xcontent laptop:flex laptop:gap-25 z-10" id="contact-us">
                 <div className="basis-[80%]">
-                    <header className="max-w-[680px] laptop:max-w-[940px]">
+                    <header className="max-w-[680px] laptop:max-w-[940px] mt-15 laptop:mt-25">
                         <H2 color="text-white" size="text-title" weight="font-extrabold" case="lowercase" className="laptop:text-heading"><span className="uppercase">J</span>ednoduše nám <span className="font-extrabold text-green">napište</span> nebo <span className="font-extrabold text-green">zavolejte</span>.</H2>
                     </header>
                     <div className="mt-10">

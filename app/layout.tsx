@@ -80,8 +80,8 @@ export default function RootLayout({
         </Navbar>
       </header>
       <PageWrapper>
-          {children}
-          <Footer/>
+        {children}
+        <Footer/>
       </PageWrapper>
     </body>
     </html>

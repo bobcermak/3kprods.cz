@@ -4,23 +4,48 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
+import Lenis from "lenis";
+import { usePathname } from "next/navigation";
 
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  gsap.registerPlugin(ScrollTrigger);
 }
 export const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   //Hooks
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   useGSAP(() => {
-    ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1.5,
-      effects: true,
+    const lenis = new Lenis({
+      duration: 2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
-    const heroTl = gsap.timeline({ defaults: { ease: "power2.ease-in-out" } });
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
+    const handleLinkClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const link = target.closest("a");
+      if (!link) return;
+      const href = link.getAttribute("href");
+      if (!href || !href.includes("#")) return;
+      const [path, hash] = href.split("#");
+      if ((path === "" || path === pathname) && hash) {
+          const targetElem = document.getElementById(hash);
+          if (targetElem) {
+              e.preventDefault();
+              lenis.scrollTo(targetElem, {
+                  offset: -80,
+                  duration: 1.5,
+                  lock: true
+              });
+          }
+      }
+    };
+    document.addEventListener("click", handleLinkClick);
+    const heroTl = gsap.timeline({ defaults: { ease: "power2.easeInOut" } });
     heroTl.fromTo(".anim-hero-text", { y: 60, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 1, stagger: 0.15, delay: 0.2 });
     heroTl.fromTo(".anim-hero-btn", { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.6, stagger: 0.1, ease: "back.out(1.7)" }, "-=0.6");
     heroTl.fromTo(".anim-hero-card", { x: 60, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 1.2 }, "<");
@@ -31,17 +56,15 @@ export const PageWrapper = ({ children }: { children: React.ReactNode }) => {
     gsap.fromTo(".anim-reviews-img", { scale: 0.9, autoAlpha: 0 }, { scrollTrigger: { trigger: "#reviews", start: "top 80%" }, scale: 1, autoAlpha: 1, duration: 1.2, ease: "power2.out", delay: 0.2 });
     ScrollTrigger.refresh();
     setTimeout(() => ScrollTrigger.refresh(), 100);
-    const handleLoad = () => ScrollTrigger.refresh();
-    window.addEventListener("load", handleLoad);
     return () => {
-      window.removeEventListener("load", handleLoad);
+      document.removeEventListener("click", handleLinkClick);
+      lenis.destroy();
+      gsap.ticker.remove(lenis.raf);
     };
-  }, { scope: wrapperRef });
+  }, { scope: wrapperRef, dependencies: [pathname] });
   return (
-    <div id="smooth-wrapper" ref={wrapperRef}>
-      <div id="smooth-content">
-        {children}
-      </div>
+    <div ref={wrapperRef}>
+      {children}
     </div>
   );
 };
