@@ -1,6 +1,6 @@
 # 3K Productions | Tvůj Zážitek - Naše Práce
 
-![Mockup webu 3K Productions](/)
+![Mockup webu 3K Productions](/public/images/content/3KProductions-mockup.jpg)
 
 > 🌐 Náhled webu – moderní, responzivní, postavené v **Next.js**  
 
