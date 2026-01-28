@@ -9,6 +9,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 const Animations = ({ children }: { children: React.ReactNode }) => {
+  //Hooks
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
@@ -21,6 +22,28 @@ const Animations = ({ children }: { children: React.ReactNode }) => {
     gsap.fromTo(".anim-services-img", { scale: 0.9, autoAlpha: 0 }, { scrollTrigger: { trigger: ".anim-services-img", start: "top 80%" }, scale: 1, autoAlpha: 1, duration: 1, ease: "expo.out" });
     gsap.fromTo(".anim-reviews-left", { x: -50, autoAlpha: 0 }, { scrollTrigger: { trigger: "#reviews", start: "top 80%" }, x: 0, autoAlpha: 1, duration: 1, ease: "power2.out" });
     gsap.fromTo(".anim-reviews-img", { scale: 0.9, autoAlpha: 0 }, { scrollTrigger: { trigger: "#reviews", start: "top 80%" }, scale: 1, autoAlpha: 1, duration: 1.2, ease: "power2.out", delay: 0.2 });
+    gsap.utils.toArray<HTMLElement>(".anim-stat-number").forEach((stat) => {
+      const endValue = parseInt(stat.innerText, 10);
+      const originalWidth = stat.offsetWidth;
+      stat.style.width = `${originalWidth}px`;
+      stat.style.display = "inline-block";
+      stat.style.textAlign = "right";
+      stat.innerText = "0";
+      const obj = { val: 0 };
+      gsap.to(obj, {
+        val: endValue,
+        duration: 3,
+        ease: "power2.easeInOut",
+        scrollTrigger: {
+          trigger: "#stats",
+          start: "top 80%",
+          once: true,
+        },
+        onUpdate: () => {
+          stat.innerText = Math.round(obj.val).toString();
+        },
+      });
+    });
     ScrollTrigger.refresh();
     setTimeout(() => ScrollTrigger.refresh(), 100);
   }, { scope: containerRef });

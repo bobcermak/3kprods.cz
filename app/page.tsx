@@ -8,8 +8,8 @@ const HomePage = () => {
   return (
     <Animations>
       <main>
-        <section className="blur-setup blur-setup--green blur-setup-hero-left blur-setup-hero-right bg-[linear-gradient(46deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)] laptop:bg-[linear-gradient(86deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)]" id="welcome">
-          <div className="mt-47 stablet:mt-[297px] laptop:mt-[314px] mx-auto w-xcontent laptop:flex laptop:justify-center laptop:gap-10 min-[1401px]:gap-20">
+        <section className="relative blur-setup blur-setup--green blur-setup-hero-left blur-setup-hero-right bg-[linear-gradient(46deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)] laptop:bg-[linear-gradient(86deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)]" id="welcome">
+          <div className="pt-47 pb-px stablet:pt-[297px] laptop:pt-[314px] mx-auto w-xcontent laptop:flex laptop:justify-center laptop:gap-10 min-[1401px]:gap-20">
             <div className="flex flex-col gap-10">
               <header className="flex flex-col gap-10">
                 <div className="anim-hero-text invisible" suppressHydrationWarning>
@@ -58,8 +58,8 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        <section className="blur-setup blur-setup--blue blur-setup-services-left blur-setup-services-right bg-[url('/images/vectors/services-bg-mobile-image.svg')] laptop:bg-[url('/images/vectors/services-bg-image.svg')] bg-cover bg-center bg-no-repeat py-25" id="services">
-          <div className="mx-auto w-xcontent flex flex-col gap-20 slaptop:flex-row slaptop:items-center laptop:justify-between xdesktop:w-content xldesktop:justify-center xldesktop:gap-24 relative desktop:before:content-[''] desktop:before:-bottom-25 desktop:before:-left-30 desktop:before:z-10 desktop:before:w-50 desktop:before:h-51 desktop:before:absolute desktop:before:bg-[url('/images/vectors/shape.svg')] desktop:before:bg-no-repeat desktop:before:bg-contain desktop:before:pointer-events-none desktop:after:content-[''] desktop:after:w-50 desktop:after:h-51 desktop:after:z-10 desktop:after:absolute desktop:after:bg-[url('/images/vectors/shape.svg')] desktop:after:bg-no-repeat desktop:after:bg-contain desktop:after:pointer-events-none desktop:after:-top-18 desktop:after:-right-38 desktop:after:-rotate-90">
+        <section className="relative blur-setup blur-setup--blue blur-setup-services-left blur-setup-services-right bg-[url('/images/vectors/services-bg-mobile-image.svg')] laptop:bg-[url('/images/vectors/services-bg-image.svg')] bg-cover bg-center bg-no-repeat py-25" id="services">
+          <div className="mx-auto w-xcontent flex flex-col gap-20 slaptop:flex-row slaptop:items-center laptop:justify-between xdesktop:w-content xldesktop:justify-center xldesktop:gap-24 relative desktop:before:content-[''] desktop:before:-bottom-15 desktop:before:-left-30 desktop:before:z-10 desktop:before:w-35 desktop:before:h-35 desktop:before:absolute desktop:before:bg-[url('/images/vectors/shape.svg')] desktop:before:bg-no-repeat desktop:before:bg-contain desktop:before:pointer-events-none desktop:after:content-[''] desktop:after:w-35 desktop:after:h-35 desktop:after:z-10 desktop:after:absolute desktop:after:bg-[url('/images/vectors/shape.svg')] desktop:after:bg-no-repeat desktop:after:bg-contain desktop:after:pointer-events-none desktop:after:-top-18 desktop:after:-right-38 desktop:after:-rotate-90 before:animate-[spin_10s_linear_infinite] after:animate-[spin_10s_linear_infinite]">
             <div className="slaptop:order-1 slaptop:basis-3/5 laptop:basis-1/2">
               <header className="relative z-1 anim-services-header invisible" suppressHydrationWarning>
                 <H2 weight="font-medium">Co vše zařídíme?</H2>
@@ -83,7 +83,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-15 stablet:relative stablet:block slaptop:flex slaptop:flex-col slaptop:gap-0 relative z-1 before:content-[''] before:-top-12 before:left-50 xphone:before:left-100 stablet:before:left-120 slaptop:before:hidden before:z-10 before:-rotate-90 before:w-25 before:h-26 before:absolute before:bg-[url('/images/vectors/shape.svg')] before:bg-no-repeat before:bg-contain before:pointer-events-none anim-services-img invisible" suppressHydrationWarning>
+            <div className="flex flex-col gap-15 stablet:relative stablet:block slaptop:flex slaptop:flex-col slaptop:gap-0 relative z-1 before:content-[''] before:-top-12 before:left-50 xphone:before:left-100 stablet:before:left-120 slaptop:before:hidden before:z-10 before:-rotate-90 before:w-25 before:h-25 before:absolute before:bg-[url('/images/vectors/shape.svg')] before:bg-no-repeat before:bg-contain before:animate-[spin_10s_linear_infinite] before:pointer-events-none anim-services-img invisible" suppressHydrationWarning>
               <ExpertiseCard className="stablet:absolute slaptop:static slaptop:-mt-10 slaptop:-ml-10 laptop:ml-10 stablet:max-w-[340px] -left-6 top-24 desktop:absolute desktop:top-40 desktop:-left-30 xdesktop:top-32 xdesktop:-left-40 xxldesktop:top-20 xxldesktop:-left-60" content={<>Na co jsme machři a co dávno zvládáme levou <b className="font-bold text-light-blue">zadní</b>!</>} arrowHref="https://www.youtube.com/@3KProds/videos" buttonContent="Naše projekty" buttonHref="https://www.3kprods.cz/"/>
               <figure className="slaptop:hidden w-[312px] h-[375px] mx-auto stablet:w-[540px] tablet:w-[600px] stablet:h-auto stablet:mr-0">
                 <Image className="img-responsive" src="/images/content/moderator-mobile-image.webp" alt="3kprods - fotka moderátora" loading="lazy" width={312} height={375} />
@@ -95,24 +95,24 @@ const HomePage = () => {
           </div>
         </section>
         <div className="mx-auto w-xcontent" id="stats">
-          <div className="shadow-[0_10px_12px_0_#00022240] rounded-[60px] slaptop:rounded-[80px] relative before:content-[''] before:-bottom-10 before:-right-5 desktop:before:-bottom-20 desktop:before:-right-20 before:z-10 before:w-25 before:h-26 desktop:before:w-50 desktop:before:h-51 before:absolute before:bg-[url('/images/vectors/shape.svg')] before:bg-no-repeat before:bg-contain before:pointer-events-none before:-rotate-90">
-            <Ul className="flex flex-col slaptop:flex-row slaptop:gap-30 slaptop:justify-center desktop:gap-0 desktop:justify-between stablet:items-center gap-20 my-25 xdesktop:mb-40 px-15 py-20 desktop:px-40 bg-light-blue/60 rounded-[60px] slaptop:rounded-[80px] inner-shadow-primary">
+          <div className="shadow-[0_10px_12px_0_#00022240] rounded-[60px] slaptop:rounded-[80px] relative before:content-[''] before:-bottom-10 before:-right-5 desktop:before:-bottom-20 desktop:before:-right-20 before:z-10 before:w-25 before:h-25 desktop:before:w-35 desktop:before:h-35 before:absolute before:bg-[url('/images/vectors/shape.svg')] before:bg-no-repeat before:bg-contain before:pointer-events-none before:-rotate-90 before:animate-[spin_10s_linear_infinite]">
+            <Ul className="flex flex-col min-[1080px]:flex-row min-[1080px]:gap-30 min-[1080px]:justify-center desktop:gap-0 desktop:justify-between stablet:items-center gap-20 my-25 xdesktop:mb-40 px-15 py-20 desktop:px-40 bg-light-blue/60 rounded-[60px] min-[1080px]:rounded-[80px] inner-shadow-primary">
               <Li className="stablet:flex stablet:flex-col stablet:items-center slaptop:inline-block slaptop:w-[227px] laptop:w-fit laptop:max-w-[210px] desktop:max-w-[287px] list-none">
-                <P family="font-bungee" weight="font-medium" color="text-white" size="text-[3rem]" className="relative after:absolute after:content-[''] after:bottom-0 after:left-0 after:w-[140px] after:h-0.5 after:bg-white min-[1401px]:text-heading desktop:text-display">100+</P>
+                <P family="font-bungee" weight="font-medium" color="text-white" size="text-[3rem]" className="relative after:absolute after:content-[''] after:bottom-0 after:left-50% desktop:after:left-0 after:-translate-x-full desktop:after:translate-x-0 after:w-[140px] after:h-0.5 after:bg-white min-[1401px]:text-heading desktop:text-display"><span className="anim-stat-number">100</span>+</P>
                 <div className="flex gap-4 items-center mt-6">
                   <i className="fa-solid fa-trophy flex justify-center items-center text-sub bg-light-blue text-white px-[15.95px] py-[17.5px] rounded-full"></i>
                   <H4 size="text-body" weight="font-bold" className="text-white/80 desktop:text-sub">Uspořádaných maturáků</H4>
                 </div>
               </Li>
-              <Li className="stablet:flex stablet:flex-col stablet:items-center slaptop:inline-block slaptop:w-[227px] laptop:w-fit laptop:max-w-[287px] desktop:max-w-[412px] list-none">
-                <P family="font-bungee" weight="font-medium" color="text-white" size="text-[3rem]" className="relative after:absolute after:content-[''] after:bottom-0 after:left-0 after:w-[140px] after:h-0.5 after:bg-white min-[1401px]:text-heading desktop:text-display">20<span className="stablet:hidden slaptop:inline laptop:hidden">K</span><span className="hidden stablet:inline slaptop:hidden laptop:inline"> 000</span>+</P>
+              <Li className="stablet:flex stablet:flex-col stablet:items-center slaptop:inline-block slaptop:w-[227px] laptop:w-fit laptop:max-w-[287px] min-[1401px]:max-w-[300px] desktop:max-w-[412px] list-none">
+                <P family="font-bungee" weight="font-medium" color="text-white" size="text-[3rem]" className="relative after:absolute after:content-[''] after:bottom-0 after:left-50% laptop:after:left-0 after:-translate-x-full laptop:after:translate-x-[25%] desktop:after:translate-x-0 after:w-[140px] after:h-0.5 after:bg-white min-[1401px]:text-heading desktop:text-display"><span className="anim-stat-number">20</span><span className="stablet:hidden slaptop:inline laptop:hidden">K</span><span className="hidden stablet:inline slaptop:hidden laptop:inline"> 000</span>+</P>
                 <div className="flex gap-4 items-center mt-6">
                   <i className="fa-solid fa-camera flex justify-center items-center text-sub bg-light-blue text-white px-[17.5px] py-[17.5px] rounded-full"></i>
                   <H4 size="text-body" weight="font-bold" className="text-white/80 desktop:text-sub">Fotek a videí</H4>
                 </div>
               </Li>
               <Li className="stablet:flex stablet:flex-col stablet:items-center slaptop:inline-block slaptop:w-[227px] laptop:w-fit laptop:max-w-[287px] list-none">
-                <P family="font-bungee" weight="font-medium" color="text-white" size="text-[3rem]" className="relative after:absolute after:content-[''] after:bottom-0 after:left-0 after:w-[140px] after:h-0.5 after:bg-white min-[1401px]:text-heading desktop:text-display">10+</P>
+                <P family="font-bungee" weight="font-medium" color="text-white" size="text-[3rem]" className="relative after:absolute after:content-[''] after:bottom-0 after:left-50% desktop:after:left-0 after:translate-x-[-87.5%] desktop:after:translate-x-0 after:w-[140px] after:h-0.5 after:bg-white min-[1401px]:text-heading desktop:text-display"><span className="anim-stat-number">10</span>+</P>
                 <div className="flex gap-4 items-center mt-6">
                   <i className="fa-solid fa-school flex justify-center items-center text-sub bg-light-blue text-white px-[14.39px] py-[17.5px] rounded-full"></i>
                   <H4 size="text-body" weight="font-bold" className="text-white/80 desktop:text-sub">let zkušeností</H4>
