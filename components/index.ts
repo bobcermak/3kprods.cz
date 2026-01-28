@@ -17,4 +17,5 @@ export { default as PoweredBy } from './layout/footer/PoweredBy';
 export { default as Hamburger } from './layout/header/Hamburger';
 export { default as Footer } from './layout/footer/Footer';
 export { default as SwiperPrimary } from './swipers/SwiperPrimary';
+export { default as Animations } from './layout/wrappers/Animations';
 export { PageWrapper } from './layout/wrappers/PageWrapper';
