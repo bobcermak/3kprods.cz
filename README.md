@@ -1,4 +1,4 @@
-# 3K Productions | Tvůj Zážitek - Naše Práce
+# 3K Productions | Maturitní plesy a studentské akce na klíč
 
 ![Mockup webu 3K Productions](/public/images/content/3KProductions-mockup.jpg)
 

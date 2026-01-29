@@ -157,7 +157,6 @@ html.lenis, html.lenis body {
 /*Blurs*/
 
 .blur-setup {
-  position: relative;
   overflow: hidden;
 }
 
