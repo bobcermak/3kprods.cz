@@ -40,7 +40,7 @@ const Footer = () => {
                         </Ul>
                     </div>
                 </div>
-                <div className="mt-10 laptop:sticky laptop:top-[40%] laptop:mt-25 laptop:self-start h-fit min-[1701px]:static min-[1701px]:self-center">
+                <div className="mt-10 laptop:sticky laptop:top-[40%] laptop:mt-0 laptop:self-start h-fit min-[1701px]:static min-[1701px]:self-center">
                     <div className="flex justify-center items-center gap-5 laptop:justify-start">
                         <Button href="/" noStyle={true} ariaLabel="3kprods - logo" className="min-w-[100px]"><Image className="img-responsive" src="/images/assets/logo.webp" alt="3kprods - logo" loading="lazy" width={100} height={100}/></Button>
                         <H3 size="text-body" weight="font-semibold" case="lowercase" className="text-white/60"><span className="uppercase">R</span>ychle a efektivně na eventy a marketing!</H3>
