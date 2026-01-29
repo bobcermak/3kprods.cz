@@ -1,14 +1,41 @@
-import { Button } from "@/components";
-import { type FC } from "react";
+"use client";
+
+import { Button, P } from "@/components";
+import { useState, type FC } from "react";
+import { sendNewsletterAction } from "@/lib/actions/sendNewsletterAction";
+import { useFormStatus } from "react-dom";
 
 type NewsletterFormProps = {
     placeholder?: string,
     icon?: React.ReactNode,
     className?: string
 }
-const NewsletterForm: FC<NewsletterFormProps> = ({ placeholder, icon, className }) => {
+const SubmitButton = () => {
+    const { pending } = useFormStatus();
     return (
-        <form className={`mx-auto laptop:ml-0 max-w-[640px] bg-white rounded-[80px] ${className} shadow-secondary border border-dark/60 overflow-hidden`}>
+        <Button isLink={false} type="submit">
+            {pending ? "Odesílám..." : "Odeslat"}
+        </Button>
+    );
+};
+const NewsletterForm: FC<NewsletterFormProps> = ({ placeholder, icon, className }) => {
+    //Hooks
+    const [submit, setSubmit] = useState<boolean>(false);
+    const [successSubmit, setSuccessSubmit] = useState<boolean>(false);
+
+    const handleSubmit = async (formData: FormData) => {
+        const result = await sendNewsletterAction(formData.get("email") as string, "Vítej v našem newsletteru! 🚀");
+        setSubmit(true);
+        if (result.success) setSuccessSubmit(true);
+        else {
+            setSuccessSubmit(false);
+            setTimeout(() => {
+                setSubmit(false);
+            }, 1500);
+        }
+    }
+    return !submit ? (
+        <form action={handleSubmit} className={`mx-auto laptop:ml-0 max-w-[640px] bg-white rounded-[80px] ${className} shadow-secondary border border-dark/60 overflow-hidden`}>
             <div className="flex items-center justify-between inner-shadow-primary py-3">
                 <div className="pl-5 tablet:pl-6 flex items-center gap-2 basis-full tablet:basis-[65%]">
                     {icon}
@@ -16,10 +43,26 @@ const NewsletterForm: FC<NewsletterFormProps> = ({ placeholder, icon, className 
                 </div>
                 <button type="submit" className="pr-5 tablet:hidden"><i className="fa-solid fa-arrow-right rounded-full transition-transform duration-250 ease-in-out group-hover:translate-x-0.5 group-active:translate-x-0.5 text-white bg-light-blue py-1.5 px-1.75"></i></button>
                 <div className="pr-6 hidden tablet:block">
-                    <Button isLink={false} type="submit">Odeslat</Button>
+                    <SubmitButton/>
                 </div>
             </div>
         </form>
+    ) : (
+        <div className={`mx-auto laptop:ml-0 max-w-[400px] bg-white rounded-[80px] ${className} shadow-secondary border border-dark/60 overflow-hidden`}>
+            <div className="flex items-center justify-center inner-shadow-primary py-4">
+                {successSubmit ? (
+                    <div className="flex items-center gap-2">
+                        <i className="fa-solid fa-circle-check text-green-500 text-sub"></i>
+                        <P className="m-0" weight="font-semibold">Děkujeme za přihlášení! 🚀</P>
+                    </div>
+                ) : (
+                    <div className="flex items-center gap-2">
+                        <i className="fa-solid fa-circle-exclamation text-red-500 text-sub"></i>
+                        <P className="m-0" weight="font-semibold">Něco se pokazilo. Zkuste to znovu.</P>
+                    </div>
+                )} 
+            </div>
+        </div>
     )
 }
 export default NewsletterForm;

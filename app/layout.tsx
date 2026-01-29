@@ -1,4 +1,4 @@
-import { Ul, Li, Navbar, Button, Footer, PageWrapper } from "@/components";
+import { Ul, Li, Navbar, Button, Footer, PageWrapper, FloatingCard } from "@/components";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -64,7 +64,7 @@ export default function RootLayout({
         />
     </head>
     <body>
-      <Ul className="hidden fixed left-0 top-0 ml-[25px] desktop:ml-[12.5px] xdesktop:ml-[25px] mt-[311px] laptop:flex flex-col gap-10 px-4 py-6 w-fit bg-white/10 backdrop-blur-sm border border-white/40 rounded-[40px] shadow-md z-40">
+      <Ul className="hidden fixed left-0 top-0 ml-6 desktop:ml-3 xdesktop:ml-6 mt-[311px] laptop:flex flex-col gap-10 px-4 py-6 w-fit bg-white/10 backdrop-blur-sm border border-white/40 rounded-[40px] shadow-md z-40">
         <Li><a aria-label="Instagram" target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.instagram.com/3kprods/"><i className="fa-brands fa-instagram"></i></a></Li>
         <Li><a aria-label="TikTok" target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.tiktok.com/@3kprods"><i className="fa-brands fa-tiktok"></i></a></Li>
         <Li><a aria-label="LinkedIn" target="_blank" className="text-white text-[28px] bg-dark px-[14.75px] hover:text-dark hover:bg-white active:text-dark active:bg-white transition-all duration-250 py-[10.6px] rounded-full" href="https://www.linkedin.com/company/3kprods/"><i className="fa-brands fa-linkedin-in"></i></a></Li>
@@ -83,6 +83,7 @@ export default function RootLayout({
         {children}
         <Footer/>
       </PageWrapper>
+      <FloatingCard/>
     </body>
     </html>
   )

@@ -19,3 +19,5 @@ export { default as Footer } from './layout/footer/Footer';
 export { default as SwiperPrimary } from './swipers/SwiperPrimary';
 export { default as Animations } from './layout/wrappers/Animations';
 export { PageWrapper } from './layout/wrappers/PageWrapper';
+export { default as Newsletter } from './emails/Newsletter';
+export { default as FloatingCard } from './cards/FloatingCard';
