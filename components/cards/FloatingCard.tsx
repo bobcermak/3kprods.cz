@@ -7,18 +7,25 @@ import Link from "next/link";
 
 const FloatingCard = () => {
     //Hooks
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState<boolean>(false);
 
+    const handleDismiss = (): void => {
+        setIsVisible(false);
+        sessionStorage.setItem("floating-card-seen", "true");
+    };
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsVisible(true);
-        }, 3000);
-        return () => clearTimeout(timer);
+        const isSessionDismissed = sessionStorage.getItem("floating-card-seen");
+        if (!isSessionDismissed) {
+            const timer = setTimeout(() => {
+                setIsVisible(true);
+            }, 3000);
+            return () => clearTimeout(timer);
+        }
     }, []);
     return (
         <div className={`fixed left-[50%] translate-x-[-50%] w-[80%] xphone:left-auto xphone:translate-x-0 xphone:w-auto xphone:right-0 xphone:mr-6 desktop:mr-3 xdesktop:mr-6 z-50 max-w-100 transition-all duration-700 ease-in-out ${isVisible ? "bottom-6 translate-y-0" : "bottom-0 translate-y-full pointer-events-none"}`}>
             <div className="rounded-[15px] py-6 px-3 shadow-primary border border-dark/25 relative backdrop-blur-sm bg-white/95 hover:scale-[1.02] transition-transform duration-500">
-                <button onClick={() => setIsVisible(false)} className="absolute cursor-pointer top-5.5 right-5 text-dark/30 hover:text-light-blue active:text-light-blue duration-350 transition-all bg-light-blue/20 rounded-full p-1">
+                <button onClick={handleDismiss} className="absolute cursor-pointer top-5.5 right-5 text-dark/30 hover:text-light-blue active:text-light-blue duration-350 transition-all bg-light-blue/20 rounded-full p-1">
                     <FaTimes size={14}/>
                 </button>
                 <div className="flex gap-3">
@@ -31,7 +38,7 @@ const FloatingCard = () => {
                             Rádi s vámi probereme možnosti realizace. Nezávazně a u kávy.
                         </P>
                         <div className="flex justify-start">
-                            <Link className="text-[12px] opacity-40 hover:text-light-blue active:text-light-blue duration-250 transition-all" href="#contact-us" aria-label="Kontaktovat nás">
+                            <Link className="text-[12px] opacity-40 hover:text-light-blue active:text-light-blue duration-250 transition-all" href="#contact-us" aria-label="Kontaktovat nás" onClick={handleDismiss}>
                                 Klikni pro více info →
                             </Link>
                         </div>

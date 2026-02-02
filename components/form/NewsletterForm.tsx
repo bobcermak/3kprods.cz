@@ -23,16 +23,23 @@ const NewsletterForm: FC<NewsletterFormProps> = ({ placeholder, icon, className 
     const [submit, setSubmit] = useState<boolean>(false);
     const [successSubmit, setSuccessSubmit] = useState<boolean>(false);
 
-    const handleSubmit = async (formData: FormData) => {
-        const result = await sendNewsletterAction(formData.get("email") as string, "Vítej v našem newsletteru! 🚀");
+    const handleErrorState = (): void => {
         setSubmit(true);
-        if (result.success) setSuccessSubmit(true);
-        else {
-            setSuccessSubmit(false);
-            setTimeout(() => {
-                setSubmit(false);
-            }, 1500);
-        }
+        setSuccessSubmit(false);
+        setTimeout(() => {
+            setSubmit(false);
+        }, 1500);
+    };
+    const handleSubmit = async (formData: FormData): Promise<void> => {
+        const email = formData.get("email") as string;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailRegex.test(email)) {
+            const result = await sendNewsletterAction(email, "Vítej v našem newsletteru! 🚀");
+            setSubmit(true);
+            if (result.success) setSuccessSubmit(true);
+            else handleErrorState();
+        } 
+        else handleErrorState();
     }
     return !submit ? (
         <form action={handleSubmit} className={`mx-auto laptop:ml-0 max-w-[640px] bg-white rounded-[80px] ${className} shadow-secondary border border-dark/60 overflow-hidden`}>
