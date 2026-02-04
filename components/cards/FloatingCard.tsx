@@ -23,7 +23,7 @@ const FloatingCard = () => {
         }
     }, []);
     return (
-        <div className={`fixed left-[50%] translate-x-[-50%] w-[80%] xphone:left-auto xphone:translate-x-0 xphone:w-auto xphone:right-0 xphone:mr-6 desktop:mr-3 xdesktop:mr-6 z-50 max-w-100 transition-all duration-700 ease-in-out ${isVisible ? "bottom-6 translate-y-0" : "bottom-0 translate-y-full pointer-events-none"}`}>
+        <div className={`fixed left-[50%] translate-x-[-50%] w-[80%] xphone:left-auto xphone:translate-x-0 xphone:w-auto xphone:right-0 xphone:mr-6 desktop:mr-3 xdesktop:mr-6 z-50 max-w-100 transition-all duration-700 ease-in-out ${isVisible ? "opacity-100 bottom-6 translate-y-0" : "bottom-0 translate-y-full pointer-events-none opacity-0"}`}>
             <div className="rounded-[15px] py-6 px-3 shadow-primary border border-dark/25 relative backdrop-blur-sm bg-white/95 hover:scale-[1.02] transition-transform duration-500">
                 <button onClick={handleDismiss} className="absolute cursor-pointer top-5.5 right-5 text-dark/30 hover:text-light-blue active:text-light-blue duration-350 transition-all bg-light-blue/20 rounded-full p-1">
                     <FaTimes size={14}/>
