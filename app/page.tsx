@@ -3,20 +3,20 @@ import Image from "next/image";
 import { Review } from "@/types/appModels";
 
 const HomePage = () => {
-  const references: Review[] = [ { id: 1, personName: "Dominik Lhoták", personDescription: "Dlouho-letý partner 3K Productions", content: "S 3K Productions spolupracujeme již od roku 2023, jsme velice spokojeni s jejich prací a jsme hrdí na to, že jsme mezi partnery této mladé, spolehlivé firmy." }, { id: 2, personName: "Honza V.", personDescription: "Maturant z Gymnázia Tanvald, 2024", content: "Příprava na maturák s 3K Productions byla perfektní. Jejich tým přinesl nejen skvělé nápady, ale kluci se také ukázali jako velmi dobří komunikátoři. Kdykoliv jsme potřebovali něco udělat rychle, byli jsme si jistí, že se na kluky můžem spolehnout." }, { id: 3, personName: "Adéla K.", personDescription: "Hlavní organizátorka plesu, OA Liberec, 2024", content: "Výsledné aftermovie předčilo naše očekávání. Nechtěli jsme jen nudný záznam, ale video, které bude mít energii, a to se 3K Productions povedlo na jedničku. Skvěle zachytili atmosféru i momenty, kterých jsme si v tom shonu ani nevšimli. Díky za vzpomínku, která nevybledne." } ]
-  
+  const references: Review[] = [{ id: 1, personName: "Dominik Lhoták", personDescription: "Dlouho-letý partner 3K Productions", content: "S 3K Productions spolupracujeme již od roku 2023, jsme velice spokojeni s jejich prací a jsme hrdí na to, že jsme mezi partnery této mladé, spolehlivé firmy." }, { id: 2, personName: "Honza V.", personDescription: "Maturant z Gymnázia Tanvald, 2024", content: "Příprava na maturák s 3K Productions byla perfektní. Jejich tým přinesl nejen skvělé nápady, ale kluci se také ukázali jako velmi dobří komunikátoři. Kdykoliv jsme potřebovali něco udělat rychle, byli jsme si jistí, že se na kluky můžem spolehnout." }, { id: 3, personName: "Adéla K.", personDescription: "Hlavní organizátorka plesu, OA Liberec, 2024", content: "Výsledné aftermovie předčilo naše očekávání. Nechtěli jsme jen nudný záznam, ale video, které bude mít energii, a to se 3K Productions povedlo na jedničku. Skvěle zachytili atmosféru i momenty, kterých jsme si v tom shonu ani nevšimli. Díky za vzpomínku, která nevybledne." }]
+
   return (
     <Animations>
       <main>
         <section className="relative blur-setup blur-setup--green blur-setup-hero-left blur-setup-hero-right bg-[linear-gradient(46deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)] laptop:bg-[linear-gradient(86deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)]" id="welcome">
-          <div className="pt-47 pb-px stablet:pt-[297px] laptop:pt-[314px] mx-auto w-xcontent laptop:flex laptop:justify-center laptop:gap-10 min-[1401px]:gap-20">
+          <div className="pt-52 pb-px stablet:pt-[297px] laptop:pt-[314px] mx-auto w-xcontent laptop:flex laptop:justify-center laptop:gap-10 min-[1401px]:gap-20">
             <div className="flex flex-col gap-10">
               <header className="flex flex-col gap-10">
                 <div className="anim-hero-text invisible" suppressHydrationWarning>
-                    <H1 size="text-title" color="text-white" className="mx-auto relative w-[319.5px] xphone:text-heading xphone:w-[512.5px] stablet:w-[542.5px] after:content[''] after:absolute after:right-0 after:bottom-[-30px] after:bg-blue after:w-[68px] after:h-[200px] xphone:after:w-[120px] xphone:after:h-60 stablet:after:w-[150px] stablet:after:h-[300px] after:rounded-[20px] z-1 after:-z-1 laptop:text-title laptop:w-[319.5px] laptop:after:w-[68px] laptop:after:h-[200px] desktop:text-heading desktop:w-[512.5px] desktop:after:w-[120px] desktop:after:h-60 xdesktop:text-display xdesktop:w-[633.5px] xdesktop:after:w-[150px] xdesktop:after:h-[300px]">Tvůj zážitek. Náše <span className="text-green">práce</span>.</H1>
+                  <H1 size="text-title" color="text-white" className="mx-auto relative w-[319.5px] xphone:text-heading xphone:w-[512.5px] stablet:w-[542.5px] after:content[''] after:absolute after:right-0 after:bottom-[-30px] after:bg-blue after:w-[68px] after:h-[200px] xphone:after:w-[120px] xphone:after:h-60 stablet:after:w-[150px] stablet:after:h-[300px] after:rounded-[20px] z-1 after:-z-1 laptop:text-title laptop:w-[319.5px] laptop:after:w-[68px] laptop:after:h-[200px] desktop:text-heading desktop:w-[512.5px] desktop:after:w-[120px] desktop:after:h-60 xdesktop:text-display xdesktop:w-[633.5px] xdesktop:after:w-[150px] xdesktop:after:h-[300px]">Tvůj zážitek. Náše <span className="text-green">práce</span>.</H1>
                 </div>
                 <div className="anim-hero-text invisible" suppressHydrationWarning>
-                    <P color="text-white" weight="font-medium" className="z-1 mx-auto max-w-[319.5px] xphone:max-w-[512.5px] laptop:max-w-[320px] stablet:max-w-[542.5px] desktop:max-w-[512.5px] desktop:ml-0">Jsme parta z <strong className="text-green font-semibold">Liberce</strong> a <strong className="text-green font-semibold">maturitní plesy</strong> máme v malíku. Zařídíme <strong className="text-green font-semibold">DJ, moderátora, světla</strong> i <strong className="text-green font-semibold">výzdobu</strong> - vy jen dorazíte v šatech a oblecích.</P>
+                  <P color="text-white" weight="font-medium" className="z-1 mx-auto max-w-[319.5px] xphone:max-w-[512.5px] laptop:max-w-[320px] stablet:max-w-[542.5px] desktop:max-w-[512.5px] desktop:ml-0">Jsme parta z <strong className="text-green font-semibold">Liberce</strong> a <strong className="text-green font-semibold">maturitní plesy</strong> máme v malíku. Zařídíme <strong className="text-green font-semibold">DJ, moderátora, světla</strong> i <strong className="text-green font-semibold">výzdobu</strong> - vy jen dorazíte v šatech a oblecích.</P>
                 </div>
               </header>
               <Ul className="mx-auto w-[319.5px] xphone:w-[512.5px] stablet:w-[542.5px] flex flex-col gap-4 xphone:flex-row laptop:w-[319.5px] laptop:flex-col desktop:flex-row desktop:w-auto desktop:ml-0">
@@ -42,9 +42,9 @@ const HomePage = () => {
                   <div>
                     <P color="text-green" className="mb-4 uppercase"><strong className="font-bold">Proč si vybrat nás:</strong></P>
                     <Ul className="flex flex-col gap-4">
-                      <Li  className="flex gap-4 items-center uppercase list-none"><i className="fa-solid fa-check bg-light-blue px-[9px] py-2 rounded-full h-min text-white"></i><P size="text-sm" color="text-white" weight="font-bold" className="flex gap-1 items-center"><span>🎶</span> DJ a moderátor v ceně</P></Li>
-                      <Li  className="flex gap-4 items-center uppercase list-none"><i className="fa-solid fa-check bg-light-blue px-[9px] py-2 rounded-full h-fit text-white"></i><P size="text-sm" color="text-white" weight="font-bold" className="flex gap-1 items-center"><span>💡</span> Kompletní technika a světla</P></Li>
-                      <Li  className="flex gap-4 items-center uppercase list-none"><i className="fa-solid fa-check bg-light-blue px-[9px] py-2 rounded-full h-fit text-white"></i><P size="text-sm" color="text-white" weight="font-bold" className="flex gap-1 items-center"><span>📸</span> Fotokoutek a profi fotograf</P></Li>
+                      <Li className="flex gap-4 items-center uppercase list-none"><i className="fa-solid fa-check bg-light-blue px-[9px] py-2 rounded-full h-min text-white"></i><P size="text-sm" color="text-white" weight="font-bold" className="flex gap-1 items-center"><span>🎶</span> DJ a moderátor v ceně</P></Li>
+                      <Li className="flex gap-4 items-center uppercase list-none"><i className="fa-solid fa-check bg-light-blue px-[9px] py-2 rounded-full h-fit text-white"></i><P size="text-sm" color="text-white" weight="font-bold" className="flex gap-1 items-center"><span>💡</span> Kompletní technika a světla</P></Li>
+                      <Li className="flex gap-4 items-center uppercase list-none"><i className="fa-solid fa-check bg-light-blue px-[9px] py-2 rounded-full h-fit text-white"></i><P size="text-sm" color="text-white" weight="font-bold" className="flex gap-1 items-center"><span>📸</span> Fotokoutek a profi fotograf</P></Li>
                     </Ul>
                   </div>
                 </div>
@@ -53,7 +53,7 @@ const HomePage = () => {
                 </footer>
               </article>
               <figure className="relative mx-auto -my-9 w-[90%] h-[300px] z-10 mb-25 laptop:z-0 laptop:mx-none laptop:my-0 laptop:w-[404px] laptop:h-[505px] laptop:-ml-[152px] desktop:w-[434px] desktop:h-[529px] xdesktop:w-[504px] xdesktop:h-[548px]">
-                <Image className="img-responsive rounded-[40px]" src="/images/content/prom-image.webp" alt="3kprods - fotka maturitního plesu" loading="lazy" width={504} height={548}/>
+                <Image className="img-responsive rounded-[40px]" src="/images/content/prom-image.webp" alt="3kprods - fotka maturitního plesu" loading="lazy" width={504} height={548} />
               </figure>
             </div>
           </div>
@@ -79,12 +79,12 @@ const HomePage = () => {
                   <Li className="grow desktop:basis-[30%] list-none anim-services-item invisible"><InfoCard icon={<i className="fa-solid fa-camera text-sub text-light-blue"></i>} title="Fotograf">Selfie i skupiny - máme je</InfoCard></Li>
                 </Ul>
                 <div className="anim-services-item invisible" suppressHydrationWarning>
-                    <Button className="mt-10" href="tel:+420722145257" variant="secondary">Chci maturák!</Button>
+                  <Button className="mt-10" href="tel:+420722145257" variant="secondary">Chci maturák!</Button>
                 </div>
               </div>
             </div>
             <div className="flex flex-col gap-15 stablet:relative stablet:block slaptop:flex slaptop:flex-col slaptop:gap-0 relative z-1 before:content-[''] before:-top-12 before:left-50 xphone:before:left-100 stablet:before:left-120 slaptop:before:hidden before:z-10 before:-rotate-90 before:w-25 before:h-25 before:absolute before:bg-[url('/images/vectors/shape.svg')] before:bg-no-repeat before:bg-contain before:animate-[spin_10s_linear_infinite] before:pointer-events-none anim-services-img invisible" suppressHydrationWarning>
-              <ExpertiseCard className="stablet:absolute slaptop:static slaptop:-mt-10 slaptop:-ml-10 laptop:ml-10 stablet:max-w-[340px] -left-6 top-24 desktop:absolute desktop:top-40 desktop:-left-30 xdesktop:top-32 xdesktop:-left-40 xxldesktop:top-20 xxldesktop:-left-60" content={<>Na co jsme machři a co dávno zvládáme levou <b className="font-bold text-light-blue">zadní</b>!</>} arrowHref="https://www.youtube.com/@3KProds/videos" buttonContent="Naše projekty" buttonHref="https://www.3kprods.cz/"/>
+              <ExpertiseCard className="stablet:absolute slaptop:static slaptop:-mt-10 slaptop:-ml-10 laptop:ml-10 stablet:max-w-[340px] -left-6 top-24 desktop:absolute desktop:top-40 desktop:-left-30 xdesktop:top-32 xdesktop:-left-40 xxldesktop:top-20 xxldesktop:-left-60" content={<>Na co jsme machři a co dávno zvládáme levou <b className="font-bold text-light-blue">zadní</b>!</>} arrowHref="https://www.youtube.com/@3KProds/videos" buttonContent="Naše projekty" buttonHref="https://www.3kprods.cz/" />
               <figure className="slaptop:hidden w-[312px] h-[375px] mx-auto stablet:w-[540px] tablet:w-[600px] stablet:h-auto stablet:mr-0">
                 <Image className="img-responsive" src="/images/content/moderator-mobile-image.webp" alt="3kprods - fotka moderátora" loading="lazy" width={312} height={375} />
               </figure>
