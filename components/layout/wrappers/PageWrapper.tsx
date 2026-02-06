@@ -25,13 +25,11 @@ export const PageWrapper = ({ children }: { children: React.ReactNode }) => {
       lenis.raf(time * 1000);
     });
     gsap.ticker.lagSmoothing(0);
-
     const refresh = () => ScrollTrigger.refresh();
     refresh();
     setTimeout(refresh, 500);
     setTimeout(refresh, 2000);
     window.addEventListener("load", refresh);
-
     const handleLinkClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const link = target.closest("a");
