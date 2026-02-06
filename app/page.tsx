@@ -9,7 +9,7 @@ const HomePage = () => {
     <Animations>
       <main>
         <section className="relative blur-setup blur-setup--green blur-setup-hero-left blur-setup-hero-right bg-[linear-gradient(46deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)] laptop:bg-[linear-gradient(86deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)]" id="welcome">
-          <div className="pt-[240px] pb-px stablet:pt-[297px] laptop:pt-[314px] mx-auto w-xcontent laptop:flex laptop:justify-center laptop:gap-10 min-[1401px]:gap-20">
+          <div className="pt-[400px] pb-px stablet:pt-[297px] laptop:pt-[314px] mx-auto w-xcontent laptop:flex laptop:justify-center laptop:gap-10 min-[1401px]:gap-20">
             <div className="flex flex-col gap-10">
               <header className="flex flex-col gap-10">
                 <div className="anim-hero-text invisible" suppressHydrationWarning>
