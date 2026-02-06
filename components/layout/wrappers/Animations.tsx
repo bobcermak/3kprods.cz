@@ -14,7 +14,7 @@ const Animations = ({ children }: { children: React.ReactNode }) => {
 
   useGSAP(() => {
     const heroTl = gsap.timeline({ defaults: { ease: "power2.easeInOut" } });
-    gsap.set(".anim-hero-text", { autoAlpha: 0, y: 50 });
+    gsap.set(".anim-hero-text", { autoAlpha: 0, y: 60 });
     heroTl.to(".anim-hero-text", { y: 0, autoAlpha: 1, duration: 1, stagger: 0.15 });
     heroTl.fromTo(".anim-hero-btn", { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.6, stagger: 0.1, ease: "back.out(1.7)" }, "-=0.6");
     heroTl.fromTo(".anim-hero-card", { x: 60, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 1.2 }, "<");
