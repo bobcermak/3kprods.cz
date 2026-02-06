@@ -25,6 +25,9 @@ export const PageWrapper = ({ children }: { children: React.ReactNode }) => {
       lenis.raf(time * 1000);
     });
     gsap.ticker.lagSmoothing(0);
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500);
     const handleLinkClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const link = target.closest("a");
@@ -33,15 +36,15 @@ export const PageWrapper = ({ children }: { children: React.ReactNode }) => {
       if (!href || !href.includes("#")) return;
       const [path, hash] = href.split("#");
       if ((path === "" || path === pathname) && hash) {
-          const targetElem = document.getElementById(hash);
-          if (targetElem) {
-              e.preventDefault();
-              lenis.scrollTo(targetElem, {
-                  offset: -80,
-                  duration: 1.5,
-                  lock: true
-              });
-          }
+        const targetElem = document.getElementById(hash);
+        if (targetElem) {
+          e.preventDefault();
+          lenis.scrollTo(targetElem, {
+            offset: -80,
+            duration: 1.5,
+            lock: true
+          });
+        }
       }
     };
     document.addEventListener("click", handleLinkClick);
