@@ -12,7 +12,7 @@ type H1Props = {
   className?: string,
   children: React.ReactNode
 }
-const H1 = ({ family = "font-bungee", style = "not-italic", size = "text-heading", weight = "font-normal", leading = "leading-[1.7]", color = "text-dark", align = "text-left", case: textCase = "uppercase", className, children }: H1Props) => {
+const H1 = ({ family = "font-bungee", style = "not-italic", size = "text-heading", weight = "font-normal", leading = "leading-tight", color = "text-dark", align = "text-left", case: textCase = "uppercase", className, children }: H1Props) => {
   const classes: string = [family, style, size, weight, leading, color, align, textCase, className].join(" ");
   return <h1 className={classes}>{children}</h1>;
 }
