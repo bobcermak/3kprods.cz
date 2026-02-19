@@ -15,9 +15,10 @@ type FooterCreditsProps = {
     linksAClassName?: string
 }
 const FooterCredits: FC<FooterCreditsProps> = ({ year, companyName, socialLinks, className, linksClassName, linksAClassName }) => {
+  const currentYear = new Date().getFullYear();
   return (
     <section className={className}>
-        <P weight="font-medium" className="order-1 text-white/60 slaptop:order-0">&copy; {year} {companyName} - Všechna práva vyhrazena</P>
+        <P weight="font-medium" className="order-1 text-white/60 slaptop:order-0">&copy; {year} - {currentYear} {companyName} - Všechna práva vyhrazena</P>
         <PoweredBy firstName="Bob" lastName="Cermak" link="https://www.linkedin.com/in/bohuslav-%C4%8Derm%C3%A1k-0020ba376/"/>
         <Ul className="flex gap-4 slaptop:gap-4">
         {socialLinks?.map((item) => (
