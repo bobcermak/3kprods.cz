@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "Hudba, dekorace, světla i moderace pro nejlepší maturák a studentské akce s týmem 3K Productions. Kompletní event management na míru v ČR.",
   referrer: "strict-origin-when-cross-origin",
   keywords: ["3K Productions", "maturitní ples", "maturák", "studentská akce", "studentská party", "DJ na ples", "dekorace na ples", "světla a zvuk", "event management", "Liberec"],
+  authors: [{ name: "Bohuslav Čermák" }],
   icons: {
     icon: [
       { url: "/images/assets/favicon-16x16.png", sizes: "16x16", type: "image/png" },
