@@ -46,7 +46,7 @@ const Footer = () => {
                         <H3 size="text-body" weight="font-semibold" case="lowercase" className="text-white/60"><span className="uppercase">R</span>ychle a efektivně na eventy a marketing!</H3>
                     </div>
                     <div className="mt-10">
-                        <P color="text-white" size="text-sub" weight="font-bold" className="stablet:text-center laptop:text-left">Nenechte si nic ujít! Přihlaste se k našemu <span className="text-green">newsletteru</span> a buďte vždy o krok napřed.</P>
+                        <P color="text-white" size="text-sub" weight="font-bold" className="stablet:text-center laptop:text-left">Nenechte si nic ujít! Přihlaste se k našemu <span className="text-green">odběru novinek</span> a buďte vždy o krok napřed.</P>
                         <NewsletterForm icon={<i className="fa-solid fa-envelope text-dark/60"></i>} placeholder="example@domain.com" className="mt-6"/>
                     </div>
                 </div>
