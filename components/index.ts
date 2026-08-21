@@ -20,4 +20,6 @@ export { default as SwiperPrimary } from './swipers/SwiperPrimary';
 export { default as Animations } from './layout/wrappers/Animations';
 export { PageWrapper } from './layout/wrappers/PageWrapper';
 export { default as Newsletter } from './emails/Newsletter';
-export { default as FloatingCard } from './cards/FloatingCard';
+export { default as FloatingCard } from './cards/FloatingCard';export { default as JsonLd } from './seo/JsonLd';
+export { default as LegalShell } from './layout/legal/LegalShell';
+export { default as LegalSection } from './layout/legal/LegalSection';

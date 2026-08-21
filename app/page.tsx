@@ -1,12 +1,19 @@
-import { H1, H2, H3, H4, P, Ul, Li, Button, Badge, InfoCard, ExpertiseCard, ReviewCard, SwiperPrimary, Animations } from "@/components";
+import { H1, H2, H3, H4, P, Ul, Li, Button, Badge, InfoCard, ExpertiseCard, ReviewCard, SwiperPrimary, Animations, JsonLd } from "@/components";
 import Image from "next/image";
+import type { Metadata } from "next";
 import { Review } from "@/types/appModels";
+import { routes } from "@/lib/config/routes";
+import { webPageSchema, servicesSchema, faqSchema } from "@/lib/seo/schema";
 
+export const metadata: Metadata = {
+  alternates: { canonical: routes.home.path }
+};
 const HomePage = () => {
   const references: Review[] = [{ id: 1, personName: "Dominik Lhoták", personDescription: "Dlouho-letý partner 3K Productions", content: "S 3K Productions spolupracujeme již od roku 2023, jsme velice spokojeni s jejich prací a jsme hrdí na to, že jsme mezi partnery této mladé, spolehlivé firmy." }, { id: 2, personName: "Honza V.", personDescription: "Maturant z Gymnázia Tanvald, 2024", content: "Příprava na maturák s 3K Productions byla perfektní. Jejich tým přinesl nejen skvělé nápady, ale kluci se také ukázali jako velmi dobří komunikátoři. Kdykoliv jsme potřebovali něco udělat rychle, byli jsme si jistí, že se na kluky můžem spolehnout." }, { id: 3, personName: "Adéla K.", personDescription: "Hlavní organizátorka plesu, OA Liberec, 2024", content: "Výsledné aftermovie předčilo naše očekávání. Nechtěli jsme jen nudný záznam, ale video, které bude mít energii, a to se 3K Productions povedlo na jedničku. Skvěle zachytili atmosféru i momenty, kterých jsme si v tom shonu ani nevšimli. Díky za vzpomínku, která nevybledne." }]
 
   return (
     <Animations>
+      <JsonLd nodes={[webPageSchema({ path: routes.home.path, name: routes.home.title, description: routes.home.description }), servicesSchema(), faqSchema()]} />
       <main>
         <section className="relative blur-setup blur-setup--green blur-setup-hero-left blur-setup-hero-right bg-[linear-gradient(46deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)] laptop:bg-[linear-gradient(86deg,#1C2E55_0%,#243C91_25%,#4461EF_49%,#98A8F7_81%)]" id="welcome">
           <div className="pt-52 pb-px stablet:pt-[297px] laptop:pt-[314px] mx-auto w-xcontent laptop:flex laptop:justify-center laptop:gap-10 min-[1401px]:gap-20">

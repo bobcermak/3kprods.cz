@@ -1,0 +1,40 @@
+# 3K Productions
+
+> Produkční tým z Liberce, který zajišťuje maturitní plesy, studentské akce a firemní party na klíč - od DJ, moderátora a techniky přes dekorace až po fotografa, video a tiskoviny. Působíme v Libereckém kraji a po celé České republice.
+
+3K Productions je značka event produkce se sídlem v Liberci. Klientem je typicky maturitní ročník, střední škola, studentský spolek nebo firma, která potřebuje zajistit společenskou akci. Zakázku lze objednat kompletně na klíč, nebo si vybrat jen jednotlivé služby. Cena se počítá individuálně podle rozsahu, velikosti prostoru a délky akce; nezávazná kalkulace je zdarma.
+
+Web je jednostránková prezentace (Next.js) doplněná o tři právní podstránky. Neobsahuje e-shop ani rezervační systém - objednávka vždy probíhá přes telefon nebo e-mail.
+
+## Stránky
+
+- [Domů](https://3kprods.cz/): Hlavní stránka - představení týmu, přehled služeb, statistiky, reference maturantů a kontakty.
+- [Obchodní podmínky](https://3kprods.cz/obchodni-podminky): Podmínky objednávky a realizace akcí, ceny a platby, storno podmínky, licence k fotkám a videím, práva spotřebitele, pravidla užívání webu a odběru novinek.
+- [Zásady ochrany osobních údajů](https://3kprods.cz/zasady-ochrany-osobnich-udaju): Jaké osobní údaje zpracováváme, na jakém právním základě, jak dlouho a komu je předáváme; práva subjektu údajů podle GDPR.
+- [Cookies](https://3kprods.cz/cookies): Web neukládá žádné cookies, nemá analytiku ani reklamní kódy a proto ani cookie lištu; jediné úložiště je session storage pro skrytí vyskakovací kartičky.
+
+## Služby
+
+- **DJ na maturitní ples**: Profesionální DJ a hudební dramaturgie večera od nástupů přes šerpování až po volnou zábavu.
+- **Moderátor akce**: Moderace nástupů, šerpování, půlnočního překvapení i celého programu.
+- **Ozvučení**: Kompletní zvuková aparatura, mikrofony a technická obsluha po celou dobu akce.
+- **Osvětlení**: Světelný park, efekty a nasvícení sálu i parketu na míru prostoru.
+- **Dekorace a výzdoba**: Návrh a realizace dekorací a výzdoby sálu podle tématu plesu.
+- **Fotograf a fotokoutek**: Reportážní fotografie z celého večera a fotokoutek s rekvizitami.
+- **Video a aftermovie**: Videozáznam akce a sestřih aftermovie, který zachytí atmosféru večera.
+- **Grafika a tiskoviny**: Grafické návrhy a tisk vstupenek, plakátů, šerp a dalších tiskovin.
+
+## Kontakt
+
+- Telefon: +420 722 145 257, +420 739 145 788
+- E-mail: info@3kprods.cz
+- Sídlo: Liberec, Liberecký kraj, Česká republika
+- Instagram: https://www.instagram.com/3kprods/
+- TikTok: https://www.tiktok.com/@3kprods
+- LinkedIn: https://www.linkedin.com/company/3kprods/
+- YouTube: https://www.youtube.com/@3KProds
+
+## Optional
+
+- [Kompletní obsah webu](https://3kprods.cz/llms-full.txt): Plné znění textů z webu včetně referencí a nejčastějších dotazů v jednom souboru.
+- [Sitemap](https://3kprods.cz/sitemap.xml): Strojově čitelný seznam všech veřejných stránek.

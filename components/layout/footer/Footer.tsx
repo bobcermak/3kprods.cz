@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { H2, H3, P, Ul, Li, Button, NewsletterForm, FooterCredits } from "@/components";
 import Image from "next/image";
+import { routes } from "@/lib/config/routes";
 
 const Footer = () => {
     const pathname = usePathname();
@@ -51,7 +52,7 @@ const Footer = () => {
                     </div>
                 </div>
             </section>
-            <FooterCredits year={2025} companyName="3K Productions" className="relative z-10 mx-auto w-xcontent mt-15 py-15 laptop:mt-25 laptop:py-25 border-t border-white/60 flex flex-col gap-8 slaptop:flex-row slaptop:items-center slaptop:justify-between" socialLinks={[{social: <i className="fa-brands fa-instagram text-white text-[20px] border rounded-full px-[8.25px] py-[7px] hover:text-green hover:border-green active:text-green active:border-green transition-all duration-250"></i>, url: "https://www.instagram.com/3kprods/", ariaLabel: "Instagram"}, {social: <i className="fa-brands fa-tiktok text-white text-[20px] border rounded-full px-[8.25px] py-[7px] hover:text-green hover:border-green active:text-green active:border-green transition-all duration-250"></i>, url: "https://www.tiktok.com/@3kprods", ariaLabel: "TikTok"}, {social: <i className="fa-brands fa-linkedin-in text-white text-[20px] border rounded-full px-[8.25px] py-[7px] hover:text-green hover:border-green active:text-green active:border-green transition-all duration-250"></i>, url: "https://www.linkedin.com/company/3kprods/", ariaLabel: "LinkedIn"}]}/>
+            <FooterCredits year={2025} companyName="3K Productions" legalLinks={[{ label: routes.terms.title, href: routes.terms.path }, { label: routes.privacy.title, href: routes.privacy.path }, { label: routes.cookies.title, href: routes.cookies.path }]} className="relative z-10 mx-auto w-xcontent mt-15 py-15 laptop:mt-25 laptop:py-25 border-t border-white/60" rowClassName="flex flex-col gap-8 slaptop:flex-row slaptop:items-center slaptop:justify-between" socialLinks={[{social: <i className="fa-brands fa-instagram text-white text-[20px] border rounded-full px-[8.25px] py-[7px] hover:text-green hover:border-green active:text-green active:border-green transition-all duration-250"></i>, url: "https://www.instagram.com/3kprods/", ariaLabel: "Instagram"}, {social: <i className="fa-brands fa-tiktok text-white text-[20px] border rounded-full px-[8.25px] py-[7px] hover:text-green hover:border-green active:text-green active:border-green transition-all duration-250"></i>, url: "https://www.tiktok.com/@3kprods", ariaLabel: "TikTok"}, {social: <i className="fa-brands fa-linkedin-in text-white text-[20px] border rounded-full px-[8.25px] py-[7px] hover:text-green hover:border-green active:text-green active:border-green transition-all duration-250"></i>, url: "https://www.linkedin.com/company/3kprods/", ariaLabel: "LinkedIn"}]}/>
       </footer>
     )
 }
