@@ -13,6 +13,7 @@ type LegalLink = {
 type FooterCreditsProps = {
   year: number,
   companyName: string,
+  ico?: string,
   socialLinks?: SocialLink[],
   legalLinks?: LegalLink[],
   className?: string,
@@ -20,7 +21,7 @@ type FooterCreditsProps = {
   linksClassName?: string,
   linksAClassName?: string
 }
-const FooterCredits: FC<FooterCreditsProps> = ({ year, companyName, socialLinks, legalLinks, className, rowClassName, linksClassName, linksAClassName }) => {
+const FooterCredits: FC<FooterCreditsProps> = ({ year, companyName, ico, socialLinks, legalLinks, className, rowClassName, linksClassName, linksAClassName }) => {
   const currentYear = new Date().getFullYear();
   return (
     <section className={className}>
@@ -36,7 +37,7 @@ const FooterCredits: FC<FooterCreditsProps> = ({ year, companyName, socialLinks,
         </nav>
       ) : null}
       <div className={rowClassName}>
-        <P weight="font-medium" className="order-1 text-white/60 slaptop:order-0">&copy; {year} - {currentYear} {companyName} - Všechna práva vyhrazena</P>
+        <P weight="font-medium" className="order-1 text-white/60 slaptop:order-0">&copy; {year} - {currentYear} {companyName} - Všechna práva vyhrazena{ico ? <> · IČO {ico}</> : null}</P>
         <PoweredBy firstName="Bob" lastName="Cermak" link="https://bobcermak.cz"/>
         <Ul className="flex gap-4 slaptop:gap-4">
           {socialLinks?.map((item) => (
