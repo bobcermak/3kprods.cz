@@ -2,7 +2,7 @@
 
 ![Mockup webu 3K Productions](/public/images/content/3KProductions-mockup.jpg)
 
-> 🌐 Náhled webu – moderní, responzivní, postavené v **Next.js**  
+> 🌐 Náhled webu - moderní, responzivní, postavené v **Next.js**  
 
 [🚀 Otevřít web](https://3kprods.netlify.app/)
 
@@ -21,4 +21,4 @@ Podrobnosti naleznete v souboru [LICENSE](LICENSE.txt).
 
 **Autor:** Bob Čermák 🛠️
 
-> ⚡ Vizuální styl a struktura projektu je inspirovaná moderními weby v **Next.js** – čisté layouty, responzivní komponenty a elegantní typografie.
+> ⚡ Vizuální styl a struktura projektu je inspirovaná moderními weby v **Next.js** - čisté layouty, responzivní komponenty a elegantní typografie.

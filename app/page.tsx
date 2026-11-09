@@ -132,7 +132,7 @@ const HomePage = () => {
           <div className="min-[1401px]:basis-1/2 anim-reviews-left invisible" suppressHydrationWarning>
             <header className="max-w-[780px]">
               <H2 weight="font-medium">Co se o nás povída?</H2>
-              <H3 size="text-title" weight="font-extrabold" case="lowercase" className="laptop:text-heading mt-4 z-10"><strong className="font-extrabold text-light-blue"><span className="uppercase">M</span>aturanti</strong> o nás mluví jasně — s námi byl jejich <strong className="font-extrabold text-light-blue">večer výjimečný</strong>!</H3>
+              <H3 size="text-title" weight="font-extrabold" case="lowercase" className="laptop:text-heading mt-4 z-10"><strong className="font-extrabold text-light-blue"><span className="uppercase">M</span>aturanti</strong> o nás mluví jasně - s námi byl jejich <strong className="font-extrabold text-light-blue">večer výjimečný</strong>!</H3>
             </header>
             <div className="mt-15 mb-48">
               <SwiperPrimary>
